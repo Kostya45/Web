@@ -1,0 +1,361 @@
+body {
+	background-image: url('back.jpg');
+	background-attachment: fixed;
+}
+h1 {
+	color: red;
+	font-style: italic;
+	text-align: center;
+}
+.about,
+.stadium,
+.group,
+.group_stage,
+.favorite_team {
+	margin: 25px;
+	float: left;
+	border-style: solid;
+	border-color: #317bb9;
+	padding: 5px;
+	border-radius: 10px;
+	background-color: white;
+	width: 15%;
+	text-align: justify;
+}
+
+.about a,
+.stadium a,
+.group a,
+.group_stage a,
+.favorite_team a {
+	text-decoration: none;
+}
+
+a {
+	color: #317bb9;
+}
+
+
+
+a:hover {
+	color: red;
+}
+
+.header {
+	position: absolute;
+	border-style: solid;
+	border-color: #317bb9;
+	padding: 1px;
+	background-color: white;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.block_host,
+.block_stadium,
+.team,
+.team_sort {
+	float: left;
+	border-style: solid;
+	border-color: #317bb9;
+	padding: 5px;
+	border-radius: 10px;
+	background-color: white;
+	margin-top: 5px;
+	margin-left: 25px;
+	margin-right: 25px;
+	margin-bottom: 50px;
+	width: 95%;
+	display: none;
+}
+
+.image_left {
+	float: left;
+	margin: 20px;
+}
+
+.image_right {
+	float: right;
+	margin: 20px;
+}
+
+h2 {
+	text-align: center;
+}
+
+/*Стили блоков групп*/
+.block_group1,
+.block_group3,
+.block_group5 {
+	float: left;
+	border-style: solid;
+	border-color: #317bb9;
+	padding: 5px;
+	border-radius: 10px;
+	background-color: white;
+	margin-top: 5px;
+	margin-left: 25px;
+	margin-right: 158px;
+	margin-bottom: 50px;
+	width: 40%;
+	display: none;
+}
+
+.block_group2,
+.block_group4,
+.block_group6 {
+	float: left;
+	border-style: solid;
+	border-color: #317bb9;
+	padding: 5px;
+	border-radius: 10px;
+	background-color: white;
+	margin-top: 5px;
+	margin-left: 25px;
+	margin-right: 25px;
+	margin-bottom: 50px;
+	width: 40%;
+	display: none;
+}
+
+hr {
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.head {
+	position: fixed;
+	background-color: #307ab9;
+	right: 0;
+	top: 0;
+	left: 0;	
+	width: 100%;
+}
+
+#fteam {
+	margin-top: 50px;
+}
+
+#menu li {
+	display: inline-block;
+	color: #1b213a ;
+}
+
+td {
+	text-align: left;
+	margin: 2px;
+}
+
+table {
+	border-style: solid;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#center_style td {
+	text-align: center;
+}
+
+#center_style_image {
+	text-align: center;
+	border: 0px;
+}
+/*Выпадающий список*/
+.right {
+	margin-right: 90%;
+}
+
+#menu a {
+	color: #1b213a;
+	position: relative;
+  	display: table;
+  	width: 100%;
+  	text-decoration: none;
+}
+
+#menu a:hover {
+	color: white;
+}
+
+#menu ul {
+	position: absolute;
+  	z-index: 5;
+  	display: none;
+}
+#menu li:hover ul { 
+	display: block;
+}
+
+ul {
+    display: block;
+    list-style: disc;
+}
+ul:after {
+    display: block;
+    content: ' ';
+    clear: both;
+    float: none;
+}
+ul.menu > li {
+    float: left;
+    position: relative;
+}
+ul.menu > li > a {
+    display: block;
+    color: white;
+    background-color: #317bb9;
+    text-decoration: none;
+}
+ul.menu > li > a:hover {
+    background-color: black;
+}
+ul.submenu {
+    display: none;
+    position: absolute;
+    width: 130px;
+    left: 10px;
+    background-color: #4392cc;
+    border: 1px solid #4392cc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+ul.submenu > li {
+    display: block;
+}
+ul.submenu > li > a {
+    display: block;
+    padding: 10px;
+    color: white;
+    background-color: #4392cc;
+    text-decoration: none;
+}
+
+.create_profile,
+.profile {
+	float: left;
+	border-style: solid;
+	border-color: #317bb9;
+	padding: 5px;
+	border-radius: 10px;
+	background-color: white;
+	margin-top: 5px;
+	margin-left: 25px;
+	margin-bottom: 50px;
+	width: 40%;
+	display: none;
+}
+
+.create_profile {
+	margin-right: 157px;
+}
+
+/*форма*/
+
+a.save {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: rgb(64,199,129);
+  box-shadow: 0 -3px rgb(53,167,110) inset;
+  transition: 0.2s;
+} 
+a.save:hover { 
+	background: rgb(53, 167, 110); 
+}
+a.save:active {
+  background: rgb(33,147,90);
+  box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+a.cancel {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: rgb(248,93,89);
+  box-shadow: 0 -3px rgb(244,52,47) inset;
+  transition: 0.2s;
+} 
+a.cancel:hover { 
+	background: rgb(244,52,47); 
+}
+a.cancel:active {
+  background: rgb(201,18,13);
+  box-shadow: 0 3px rgb(201,18,13) inset;
+}
+
+/**/
+.block_stadium a {
+	text-decoration:none;
+}
+/*Увеичени картинки при навиднии*/
+
+.image img {
+ -moz-transition: all 1s ease-out;
+ -o-transition: all 1s ease-out;
+ -webkit-transition: all 1s ease-out;
+ }
+
+.image img:hover{
+ -webkit-transform: scale(1.1);
+ -moz-transform: scale(1.1);
+ -o-transform: scale(1.1);
+ }
+/*Удаление блока*/
+.close {
+	right: -20px;
+	top: -20px;
+	float: right;
+	width: 20px;
+	height: 20px;
+}
+
+/*Увеличение картинки при нажатии и скрывания их*/
+.overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed; 
+}
+
+.overlay:target {
+    display: block;
+}
+.popup {
+    top: -100%;
+    right: 0;
+    left: 40%;
+    font-size: 14px;
+    z-index: 20;
+    margin: 0;
+    width: 85%;
+    min-width: 320px;
+    max-width: 600px;
+    position: fixed;
+    padding: 15px;
+}
+.overlay:target+.popup {
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    top: 20%;
+}
+.popup img {
+    width: auto;
+    height: auto;
+    border: 10px solid white;
+    border-radius: 20px;
+}
+
+/*Выбор блоков для обмена их*/
+div.change {
+  border-color: red;
+}
