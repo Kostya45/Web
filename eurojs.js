@@ -3,6 +3,7 @@
 about_team_none();
 team();
 hide_all();
+
 function team() {
 	var name_team = prompt('Hello guest! You favorite team?','Germany');
 	var mass = new Array ();
@@ -18,7 +19,7 @@ function team() {
 		about_team_none();
   	}
   	else{
-		document.getElementById('fteam').innerHTML = 'Favorite team not founded';
+		document.getElementById('fteam').innerHTML = 'Favorite team not founded.';
 		document.getElementById('favteam').innerHTML = 'Favorite team not founded.';
 		document.getElementById('show_about_team_all').innerHTML = '<a href="#" onclick="team();">Chose team</a>';
 		document.getElementById('about_team').style.display = 'none';
@@ -48,24 +49,20 @@ function block_none_stadium(){
 }
 
 function block_show_group() {
-	document.getElementById('block_group1').style.display = 'block';
-	document.getElementById('block_group2').style.display = 'block';
-	document.getElementById('block_group3').style.display = 'block';
-	document.getElementById('block_group4').style.display = 'block';
-	document.getElementById('block_group5').style.display = 'block';
-	document.getElementById('block_group6').style.display = 'block';
+	var x = document.querySelectorAll('.rez');
+	for (var i = 0; i < x.length; i++) {
+        x[i].style.display = 'block';
+    }
 	document.getElementById('group_stage').innerHTML = '<a href="#" onclick="block_none_group();">Hide</a>';
 	block_none_about();
 	block_none_stadium();
 }
 
 function block_none_group() {
-	document.getElementById('block_group1').style.display = 'none';
-	document.getElementById('block_group2').style.display = 'none';
-	document.getElementById('block_group3').style.display = 'none';
-	document.getElementById('block_group4').style.display = 'none';
-	document.getElementById('block_group5').style.display = 'none';
-	document.getElementById('block_group6').style.display = 'none';
+	var x = document.querySelectorAll('.rez');
+	for (var i = 0; i < x.length; i++) {
+        x[i].style.display = 'none';
+    }
 	document.getElementById('group_stage').innerHTML = '<a href="#" onclick="block_show_group();">Learn more...</a>';
 }
 
@@ -87,9 +84,6 @@ function about_team_none() {
 	document.getElementById('show_about_team_all').innerHTML = '<a href="#" onclick="about_team_show();">Learn more...</a>';
 }
 
-function close_window() {
-	alert('YOU WILL NOT LEAVE! HAHAHAHHA');
-}
 // Показывает все блоки(почти все)
 function show_all() {
 	var x = document.querySelectorAll('.show_all');
@@ -97,6 +91,7 @@ function show_all() {
         x[i].style.display = 'block';
     }
 }
+
 // Скрывает все блоки
 function hide_all() {
 	var x = document.querySelectorAll('.show_all');
@@ -126,32 +121,23 @@ function hide_team_sort() {
 }
 
 function save() {
-	alert('Your profile is saved.');
-}
-
-var name_user;
-
-function btnclick() {
-	name_user = document.Profile.Name.value;
-}
-
-function profile_name() {
-	document.getElementById('profile').style.display = 'block';
-	document.getElementById('name').innerHTML = 'Hi, ' +name_user+ '!';
-}
-
-function hide_profile() {
-	document.getElementById('profile').style.display = 'none';
-}
-
-var check = document.getElementsByName('gender');
-
-function checked() {
+	var name_user = document.Profile.Name.value;
+	var check = document.getElementsByName('gender');
 	for (var i = 0; i < check.length; i++) {
 		if(check[i].type == "radio" && check[i].checked) {
 			document.getElementById('gender_profile').innerHTML = 'Gender: ' +check[i].value+ '';
 		}
 	}
+	alert('Your profile is saved.');
+	document.getElementById('name').innerHTML = 'Hi, ' +name_user+ '!';
+}
+
+function profile_name() {
+	document.getElementById('profile').style.display = 'block';
+}
+
+function hide_profile() {
+	document.getElementById('profile').style.display = 'none';
 }
 
 //через модули
@@ -175,6 +161,8 @@ function checked() {
 // Sorty
 
 function sorta() {
+	var myar = new Array();
+	var li1 = document.querySelectorAll('.li1');
 	for(var li2=0;li2<li1.length;li2++) {
 		myar[li2]=li1[li2].innerHTML;
 	}
@@ -185,6 +173,8 @@ function sorta() {
 }
 
 function sortz() {
+	var myar = new Array();
+	var li1 = document.querySelectorAll('.li1');
 	for(var li2=0;li2<li1.length;li2++) {
 		myar[li2]=li1[li2].innerHTML;
 	}
@@ -209,18 +199,6 @@ function img_show() {
     }
 }
 
-function sorta() {
-	for(var li2=0;li2<li1.length;li2++) {
-		myar[li2]=li1[li2].innerHTML;
-	}
-	myar.sort();
-	for(var li3=0;li3<myar.length;li3++) {
-		li1[li3].innerHTML=myar[li3];
-	}
-}
-var myar = new Array();
-var li1 = document.querySelectorAll('.li1');
-
 // var li_1 = document.querySelectorAll('.li_1');
 // function sorte() {
 // 	var myar = new Array();
@@ -238,10 +216,10 @@ var li1 = document.querySelectorAll('.li1');
 //        }
 	// }
 // }
-var newarr = new Array();
-var sp1 = document.querySelectorAll('.li2')
 
 function sorte() {
+	var newarr = new Array();
+	var sp1 = document.querySelectorAll('.li2')
 	for(var sp2=0;sp2<sp1.length;sp2++) {
 		newarr[sp2]=sp1[sp2].innerHTML;
 	}
@@ -252,6 +230,8 @@ function sorte() {
 }
 
 function sortq() {
+	var newarr = new Array();
+	var sp1 = document.querySelectorAll('.li2')
 	for(var sp2=0;sp2<sp1.length;sp2++) {
 		newarr[sp2]=sp1[sp2].innerHTML;
 	}
@@ -262,8 +242,10 @@ function sortq() {
 	}
 }
 
-
+//мелочь
+function close_window() {
+	alert('YOU WILL NOT LEAVE! HAHAHAHHA');
+}
 //задачки
 // отказ от onclick();
 // перевод в модули
-// проверка в массиве
