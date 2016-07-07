@@ -3,46 +3,26 @@
 about_team_none();
 team();
 hide_all();
-var name_team;
-// бред
-// name_team = prompt('Hello guest! You favorite team?','');
-// function team(mass,name_team) {
-// 	var mass = ['Germany', 'Spain', 'England', 'Belgium', 'Italy','Russia','Austria','Creatia',
-// 	'Ukraine','Sweden','Poland','Romania','Slovakia','Hungary','Turkey','Iceland','Wales','Albania',
-// 	'Switzerland','Czech Republic','Republic of Ireland','Northern Ireland','France'];
-//   	for (var i = 0; i < mass.length; i++) {
-//     	if (mass[i] === name_team) return i;{
-//     	document.getElementById('fteam').innerHTML = 'Your favorite team is ' +name_team+ '!';
-//     }
-//   	}
-//  	return -1;
-//   	document.getElementById('fteam').innerHTML = 'Your favorite team is ' +name_team+ '!';
-// }
-
 function team() {
-	name_team = prompt('Hello guest! You favorite team?','Germany');
-	if(name_team == 'Germany' || name_team == 'Spain'
-		|| name_team == 'England' || name_team == 'Portugal'
-		|| name_team == 'Belgium' || name_team == 'Italy'
-		|| name_team == 'Russia' || name_team == 'Austria'
-		|| name_team == 'Creatia' || name_team == 'Ukraine'
-		|| name_team == 'Sweden' || name_team == 'Poland'
-		|| name_team == 'Romania' || name_team == 'Slovakia'
-		|| name_team == 'Hungary' || name_team == 'Turkey'
-		|| name_team == 'Iceland' || name_team == 'Wales'
-		|| name_team == 'Albania' || name_team == 'Switzerland'
-		|| name_team == 'Czech Republic' || name_team == 'Republic of Ireland'
-		|| name_team == 'Northern Ireland' || name_team == 'France'){
-		document.getElementById('fteam').innerHTML = 'Your favorite team is ' +name_team+ '!';
-		document.getElementById('favteam').innerHTML = '' +name_team+ '!';
+	var name_team = prompt('Hello guest! You favorite team?','Germany');
+	var mass = new Array ();
+	var mass = ['Germany','Spain','England','Belgium','Italy','Russia','Austria','Creatia',
+	'Ukraine','Sweden','Poland','Romania','Slovakia','Hungary','Turkey','Iceland','Wales',
+	'Albania','Switzerland','Czech Republic','Republic of Ireland','Northern Ireland','France'];
+	var positiveArr = mass.filter(function(string) {
+  		return string === name_team;
+	});
+	if (positiveArr == name_team) {
+  		document.getElementById('fteam').innerHTML = 'Your favorite team is ' +positiveArr+ '!';
+		document.getElementById('favteam').innerHTML = '' +positiveArr+ '!';
 		about_team_none();
-	}
-	else {
+  	}
+  	else{
 		document.getElementById('fteam').innerHTML = 'Favorite team not founded';
 		document.getElementById('favteam').innerHTML = 'Favorite team not founded.';
 		document.getElementById('show_about_team_all').innerHTML = '<a href="#" onclick="team();">Chose team</a>';
 		document.getElementById('about_team').style.display = 'none';
-	}	
+  	}
 }
 
 function block_show_about(){
