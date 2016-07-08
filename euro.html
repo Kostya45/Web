@@ -14,14 +14,14 @@
 		<li class="right">
 			<a href="#">Menu</a>
         		<ul class="submenu">
-            	<li><a href="#q" onclick="team();">Chose team</a></li>
+            	<li id='click_team'><a href="#q">Chose team</a></li>
             	<li><a href="#w" onclick="show_all();">Show all</a></li>
             	<li><a href="#e" onclick="hide_all();">Hide all</a></li>
-            	<li><a href="#r" onclick="img_show();">Show img</a></li>
-            	<li><a href="#t" onclick="img_hide();">Hide img</a></li>
+            	<li id='s_img'><a href="#r">Show img</a></li>
+            	<li id='h_img'><a href="#t">Hide img</a></li>
             	<li><a href="#creat_profile" onclick="show_creativ_profile();">Create Profile</a></li>
             	<li><a href="#profile" onclick="profile_name();">Show Profile</a></li>
-            	<li><a href="#" onclick="close_window();">Go out</a></li>
+            	<li><a href="#" id='close_window'>Go out</a></li>
         		</ul>
     	</li>
 		<li><a href="#">On top <img src="up.png" width="15" height="15"> </a></li>
@@ -644,33 +644,12 @@
 		<p>Germany have advanced to the knockout stages in every one of their World Cup appearances but in the UEFA European Championship they have suffered group stage exits three times, finishing third in their section in 1984 and 2004, and bottom in 2000.</p>
 		</p>
 	</div>
-	<div id="about_team_eng">
-		<p>
-		<img src="">
-		<br>Best result: semi-finals 1968, 1996
-		<br>Coach: Roy Hodgson
-		<br>Leading scorers: all-time – Wayne Rooney (51); current – Wayne Rooney (51)
-		<br>Most appearances: all-time – Peter Shilton (125); current – Wayne Rooney (109)
-		<br>Association formed: 1863
-		<br>Nickname: Three Lions
-		<br>Where they play: Wembley, London
-		<p>England's recent record in major tournaments could have looked very different had it not been for penalty shoot-outs. Since losing on spot kicks to West Germany in the semi-finals of the 1990 FIFA World Cup in Italy, they have been eliminated by that method from five further tournaments – three UEFA European Championships (1996, 2004 and 2012) and two World Cups (1998, 2006). It means the 1966 World Cup triumph on home soil remains their only final appearance, although Roy Hodgson's team, group stage fallers at the 2014 World Cup, should travel to France in confident mood having qualified for UEFA EURO 2016 with ten wins out of ten.</p>
-		<br>EURO pedigree
-		<br>Matches played
-		<br>Overall: P127 W75 D33 L19 F257 A89
-		<br>Final tournament: P27 W9 D9 L9 F36 A31
-		<br>Qualifying: P100 W66 D24 L10 F221 A58
-		<p>England are alone among Europe's World Cup-winning nations in failing to capture the Henri Delaunay Cup. Indeed, they are yet to reach a UEFA European Championship final, having come closest in 1996, when they hosted the event, only to be denied by Germany in a semi-final penalty shoot-out defeat at Wembley. They also reached the last four – as world champions – in 1968, but otherwise the competition has brought few happy memories.
-		</p>
-		<p>In the four eight-team final tournaments from 1980 to 1992, England were unable to reach the knockout phase, failing to qualify altogether for the 1984 edition in France. EURO '96 apart, they have also struggled to make an impression in the 16-team finals, going out at the group stage in 2000 and suffering elimination in qualifying for the 2008 tournament. On the other two occasions, in 2004 and 2012, respective quarter-finals with Portugal and Italy both ended in shoot-out disappointments.</p>
-	</p>
-	</div>
 </div>
 <div class="create_profile show_all" id="creat_profile">
 	<h2>Create/Edit profile</h2>
 	<form name="Profile">
 		<p><b>Your name</b><br>
-   			<input type="text" name="Name" size="15" placeholder="Name">
+   			<input type="text" name="Name" size="15" placeholder="Here">
    		</p>
    		<p><b>Gender</b><br>
    			<label><input type="radio" name="gender" value="Male">Male</label><br>
@@ -704,12 +683,12 @@
    			<label><input type="checkbox" name="team" value="Northern Ireland">Northern Ireland</label><br>
    		</p>
 		<p align="right">
-			<a href="#" class="cancel" id="cancel" onclick="hide_creativ_profile();">Cancel</a>
-			<a href="#" class="save" id="save" onclick="hide_creativ_profile();save();">Save</a>
+			<a href="#" class="cancel" id="cancel" onclick="hide_all();">Cancel</a>
+			<a href="#" class="save" id="save" onclick="save();">Save</a>
 		</p>
 	</form>
 </div>
-<div class="profile" id="profile">
+<div class="profile show_all" id="profile">
 	<h1>Information</h1>
 	<p class="name" id="name">Hi, name.</p>
 	<p id="gender_profile"></p>
@@ -718,8 +697,8 @@
 </div>
 <div class="team_sort show_all" id="sort_team">
 <h1>Team in Euro 2016</h1>
-	<a onclick="sorta();"">Sort alphabetically</a>
-	<br><a onclick="sortz();">Sort unalphabetically</a><br>
+	<a id='sorta'>Sort alphabetically</a><br>
+	<a id='sortz'>Sort unalphabetically</a><br>
 	<ul id="list_id">
 		<li class="li1">France</li>
 		<li class="li1">Germany</li>
@@ -746,8 +725,8 @@
 		<li class="li1">Republic of Ireland</li>
 		<li class="li1">Northern Ireland</li>
 	</ul>
-	<a onclick="sorte();">Sort alphabetically</a><br>
-	<a onclick="sortq();">Sort unalphabetically</a><br>
+	<a id='sorte'>Sort alphabetically</a><br>
+	<a id='sortq'>Sort unalphabetically</a><br>
 	<ul id="list">
 		<li class="li2">23</li>
 		<li class="li2">5464</li>

@@ -1,8 +1,9 @@
 "use strict";
 //работает
 about_team_none();
-team();
 hide_all();
+team();
+document.getElementById('click_team').onclick = team;
 
 function team() {
 	var name_team = prompt('Hello guest! You favorite team?','Germany');
@@ -27,35 +28,34 @@ function team() {
 }
 
 function block_show_about(){
+	hide_all();
     document.getElementById('host').style.display='block';
     document.getElementById('block_about').innerHTML = '<a href="#" onclick="block_none_about();">Hide</a>';
-	block_none_stadium();
-	block_none_group();
 }
+
 function block_none_about(){
     document.getElementById('host').style.display='none';
     document.getElementById('block_about').innerHTML = '<a href="#" onclick="block_show_about();">Learn more...</a>';
 }
 
 function block_show_stadium(){
+	hide_all();
     document.getElementById('block_stadium_show').style.display='block';
     document.getElementById('block_stadium').innerHTML = '<a href="#" onclick="block_none_stadium();">Hide</a>';
-    block_none_about();
-    block_none_group();
 }
+
 function block_none_stadium(){
     document.getElementById('block_stadium_show').style.display='none';
     document.getElementById('block_stadium').innerHTML = '<a href="#" onclick="block_show_stadium();">Learn more...</a>';
 }
 
 function block_show_group() {
+	hide_all();
 	var x = document.querySelectorAll('.rez');
 	for (var i = 0; i < x.length; i++) {
         x[i].style.display = 'block';
     }
 	document.getElementById('group_stage').innerHTML = '<a href="#" onclick="block_none_group();">Hide</a>';
-	block_none_about();
-	block_none_stadium();
 }
 
 function block_none_group() {
@@ -64,14 +64,6 @@ function block_none_group() {
         x[i].style.display = 'none';
     }
 	document.getElementById('group_stage').innerHTML = '<a href="#" onclick="block_show_group();">Learn more...</a>';
-}
-
-function about_team_ger() {
-	document.getElementById('about_team_ger').style.display = 'block';
-}
-
-function about_team_ger_none() {
-	document.getElementById('about_team_ger').style.display = 'none';
 }
 
 function about_team_show() {
@@ -98,16 +90,11 @@ function hide_all() {
     for (var i = 0; i < x.length; i++) {
         x[i].style.display = 'none';
     }
-	hide_profile();
 }
 
 function show_creativ_profile() {
 	hide_all();
 	document.getElementById('creat_profile').style.display = 'block';
-}
-
-function hide_creativ_profile() {
-	document.getElementById('creat_profile').style.display = 'none';
 }
 
 function show_team_sort() {
@@ -121,6 +108,7 @@ function hide_team_sort() {
 }
 
 function save() {
+	hide_all();
 	var name_user = document.Profile.Name.value;
 	var check = document.getElementsByName('gender');
 	for (var i = 0; i < check.length; i++) {
@@ -128,39 +116,24 @@ function save() {
 			document.getElementById('gender_profile').innerHTML = 'Gender: ' +check[i].value+ '';
 		}
 	}
+	var checkbox = document.getElementsByName('team');
+	var checked = [];
+	for(var i = 0; i < checkbox.length; i++) {
+		if(checkbox[i].type == 'checkbox') {
+        	if(checkbox[i].checked) checked.push(checkbox[i].value);
+    	}
+	}
 	alert('Your profile is saved.');
 	document.getElementById('name').innerHTML = 'Hi, ' +name_user+ '!';
+	document.getElementById('team_reg').innerHTML = 'Favorite team: ' +checked+ '';
 }
 
 function profile_name() {
 	document.getElementById('profile').style.display = 'block';
 }
 
-function hide_profile() {
-	document.getElementById('profile').style.display = 'none';
-}
-
-//через модули
-// var myObj = (function(){
-
-// 	var name_user;
-
-// 	function btnclick() {
-// 		name_user = document.Profile.Name.value;
-// 	}
-// 	function profile_name() {
-// 		document.getElementById('profile').style.display = 'block';
-// 		document.getElementById('name').innerHTML = 'Hi, ' +name_user+ '!';
-// 	}
-
-// 	return btnclick;
-// 	return profile_name;
-// })();
-
-
 // Sorty
-
-function sorta() {
+sorta.onclick = function sorta() {
 	var myar = new Array();
 	var li1 = document.querySelectorAll('.li1');
 	for(var li2=0;li2<li1.length;li2++) {
@@ -172,7 +145,7 @@ function sorta() {
 	}
 }
 
-function sortz() {
+sortz.onclick = function sortz() {
 	var myar = new Array();
 	var li1 = document.querySelectorAll('.li1');
 	for(var li2=0;li2<li1.length;li2++) {
@@ -185,39 +158,21 @@ function sortz() {
 	}
 }
 // Скрывание картинок
-function img_hide() {
+h_img.onclick = function img_hide() {
 	var x = document.querySelectorAll('.image');
     for (var i = 0; i < x.length; i++) {
         x[i].style.display = 'none';
     }
 }
  
-function img_show() {
+s_img.onclick = function img_show() {
 	var x = document.querySelectorAll('.image');
     for (var i = 0; i < x.length; i++) {
         x[i].style.display = 'block';
     }
 }
 
-// var li_1 = document.querySelectorAll('.li_1');
-// function sorte() {
-// 	var myar = new Array();
-//     var arr1 = []; // массив для нечетных
-//     var arr2 = []; // массив для четных
-//    for (var i in li1) {
-//         //проверка на четность 
-//        if (li_1[i] % 2 == 0) {
-//            arr2.push(li_1[i]);
-//            myar[li2]=li1[li2].innerHTML;
-//        } 
-//        else {
-//            arr1.push(li_1[i]);
-//            li1[li3].innerHTML=myar[li3];
-//        }
-	// }
-// }
-
-function sorte() {
+sorte.onclick = function sorte() {
 	var newarr = new Array();
 	var sp1 = document.querySelectorAll('.li2')
 	for(var sp2=0;sp2<sp1.length;sp2++) {
@@ -229,7 +184,7 @@ function sorte() {
 	}
 }
 
-function sortq() {
+sortq.onclick = function sortq() {
 	var newarr = new Array();
 	var sp1 = document.querySelectorAll('.li2')
 	for(var sp2=0;sp2<sp1.length;sp2++) {
@@ -243,7 +198,7 @@ function sortq() {
 }
 
 //мелочь
-function close_window() {
+close_window.onclick = function close_window() {
 	alert('YOU WILL NOT LEAVE! HAHAHAHHA');
 }
 //задачки
