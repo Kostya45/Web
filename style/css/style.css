@@ -7,6 +7,11 @@ h1 {
 	font-style: italic;
 	text-align: center;
 }
+
+h4 {
+	text-align: center;
+}
+
 .about,
 .stadium,
 .group,
@@ -147,16 +152,18 @@ td {
 }
 
 table {
+	border:1px;
 	border-style: solid;
 	border-collapse: collapse;
+	text-align: center;
 	width: 100%;
 }
 
-#center_style td {
+.center_style td {
 	text-align: center;
 }
 
-#center_style_image {
+.center_style_image {
 	text-align: center;
 	border: 0px;
 }
@@ -188,7 +195,7 @@ table {
 
 ul {
     display: block;
-    list-style: disc;
+    list-style: square;
 }
 ul:after {
     display: block;
@@ -228,6 +235,10 @@ ul.submenu > li > a {
     color: white;
     background-color: #4392cc;
     text-decoration: none;
+}
+
+.p_right {
+	text-align: right;
 }
 
 .create_profile,
