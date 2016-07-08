@@ -2,10 +2,10 @@
 <html>
 <head>
 	<title>EURO 2016</title>
-	<link rel="stylesheet" type="text/css" href="css.css">
-	<link rel="icon" href="euro2016.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="style/css/style.css">
+	<link rel="icon" href="style/icon/euro2016.ico" type="image/x-icon">
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script src="eurojs.js" defer></script>
+	<script src="js/eurojs.js" defer></script>
 </head>
 <body>
 <header class="head">
@@ -24,21 +24,21 @@
             	<li><a href="#" id='close_window'>Go out</a></li>
         		</ul>
     	</li>
-		<li><a href="#">On top <img src="up.png" width="15" height="15"> </a></li>
+		<li><a href="#">On top <img src="style/images/icons/up.png" width="15" height="15"> </a></li>
 	</ul>
 </header>
 <h1 align="center" id="fteam"></h1>
 <hr> 
 <div class="replace">
 	<div class="about block_all_hide div" id="Div1">
-		<a href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);"><img class="close" src="close.png"></a>
+		<a href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);"><img class="close" src="style/images/icons/close.png"></a>
 		<h4 align="center">UEFA EURO 2016: France</h2>
 		<hr>
 		<p>A new dimension will be added to European football's premier international competition at UEFA EURO 2016.</p>
 		<p id="block_about"><a href="#" onclick="block_show_about();">Lear more...</a></p>
 	</div>
 	<div class="stadium block_all_hide" id="Div2">
-		<a href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);"><img class="close" src="close.png"></a>
+		<a href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);"><img class="close" src="style/images/icons/close.png"></a>
 		<h4 align="center">Main Stadium</h4>
 		<hr>
 		<ul type="disk">
@@ -51,7 +51,7 @@
 		<p id="block_stadium"><a href="#" onclick="block_show_stadium();">Learn more...</a></p>
 	</div>
 	<div class="group block_all_hide" id="Div3">
-		<a href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);"><img class="close" src="close.png"></a>
+		<a href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);"><img class="close" src="style/images/icons/close.png"></a>
 		<h4 align="center">Team of the Euro 2016</h4>
 		<hr>
 		<ul type="disk">
@@ -64,7 +64,7 @@
 		<p id="sort_block"><a href="#" onclick="show_team_sort();">Learn more...</a></p>
 	</div>
 	<div class="group_stage block_all_hide" id="Div4">
-		<a href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);"><img class="close" src="close.png"></a>
+		<a href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);"><img class="close" src="style/images/icons/close.png"></a>
 		<h4 align="center">Group Stage</h4>
 		<hr>
 			<ul type="disk">
@@ -77,7 +77,7 @@
 		<p id="group_stage"><a href="#" onclick="block_show_group();">Learn more...</a></p>
 	</div>
 	<div class="favorite_team block_all_hide" id="Div5">
-	    <a href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);"><img class="close" src="close.png"></a>
+	    <a href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);"><img class="close" src="style/images/icons/close.png"></a>
 		<h4 align="center" id="favteam">Favorite team</h4>
 		<hr>
 		<p>A new dimension will be added to European football's premier international competition at UEFA EURO 2016.</p>
@@ -86,7 +86,7 @@
 </div>
 <div class="block_host show_all" id="host">
 	<h1 align="center">France</h1>
-	<div class="image"><a href=""><img class="image_left" src="france.jpg" width="200" height="150"></a></div>
+	<div class="image"><a href=""><img class="image_left" src="style/images/flag/france.jpg" width="200" height="150"></a></div>
 	<p><br>Population: 66,000,000
 	<br>Area: 552,000 square kilometres
 	<br>Currency: Euro
@@ -126,11 +126,11 @@
 		<h2>Parc des Princes</h2>
 		<div class="image">
 			<a href="#parc">
-			<img class="image_left" src="images/paris.jpg" width="520" height="300" ></a>
+			<img class="image_left" src="style/images/stadium/paris.jpg" width="520" height="300" ></a>
 		</div>
 		<a href="#x" class="overlay" id="parc"></a>
         <div class="popup">
-			<a href="#q"><img class="is-image" src="images/paris.jpg"></a>
+			<a href="#q"><img class="is-image" src="style/images/stadium/paris.jpg"></a>
         </div>
 		<br>Parc des Princes
 		<br>UEFA capacity: 45,000
@@ -148,11 +148,11 @@
 		<h2>Stade de France</h2>
 		<div class="image">
 			<a href="#saint_denis">
-			<img class="image_right" src="images/saint-denis.jpg" width="520" height="300"></a>
+			<img class="image_right" src="style/images/stadium/saint-denis.jpg" width="520" height="300"></a>
 		</div>
 		<a href="#x" class="overlay" id="saint_denis"></a>
         <div class="popup">
-			<a href="#q"><img class="is-image" src="images/saint-denis.jpg"></a>
+			<a href="#q"><img class="is-image" src="style/images/stadium/saint-denis.jpg"></a>
         </div>
 		<br>Stade de France
 		<br>UEFA capacity: 80,000
@@ -167,11 +167,11 @@
 	<p id="stade_de_bordeaux">
 		<h2>Stade de Bordeaux</h2>
 		<div class="image">
-			<a href="#bord"><img class="image_left" src="images/bordelux.jpg" width="520" height="300"></a>
+			<a href="#bord"><img class="image_left" src="style/images/stadium/bordelux.jpg" width="520" height="300"></a>
 		</div>
 		<a href="#x" class="overlay" id="bord"></a>
         <div class="popup">
-			<a href="#q"><img class="is-image" src="images/bordelux.jpg"></a>
+			<a href="#q"><img class="is-image" src="style/images/stadium/bordelux.jpg"></a>
         </div>
 		<br>Stade de Bordeaux
 		<br>UEFA capacity: 42,000
@@ -186,11 +186,11 @@
 		<h2>Stade Bollaert-Delelis</h2>
 		<div class="image">
 			<a href="#lens">
-			<img class="image_right" src="images/lens.jpg" width="520" height="300"></a>
+			<img class="image_right" src="style/images/stadium/lens.jpg" width="520" height="300"></a>
 		</div>
 		<a href="#x" class="overlay" id="lens"></a>
         <div class="popup">
-			<a href="#q"><img class="is-image" src="images/lens.jpg"></a>
+			<a href="#q"><img class="is-image" src="style/images/stadium/lens.jpg"></a>
         </div>
 		<br>Stade Bollaert-Delelis
 		<br>UEFA capacity: 35,000
@@ -206,11 +206,11 @@
 		<h2>Stade Pierre Mauroy</h2>
 		<div class="image">
 			<a href="#lil">
-			<img class="image_left" src="images/lil.png" width="520" height="300"></a>
+			<img class="image_left" src="style/images/stadium/lil.png" width="520" height="300"></a>
 		</div>
 		<a href="#x" class="overlay" id="lil"></a>
         <div class="popup">
-			<a href="#q"><img class="is-image" src="images/lil.png"></a>
+			<a href="#q"><img class="is-image" src="style/images/stadium/lil.png"></a>
         </div>
 		<br>Stade Pierre Mauroy
 		<br>UEFA capacity: 50,000
@@ -226,11 +226,11 @@
 		<h2>Stade de Lyon</h2>
 		<div class="image">
 			<a href="#luon">
-			<img class="image_right" src="images/luon.jpg" width="520" height="300"></a>
+			<img class="image_right" src="style/images/stadium/luon.jpg" width="520" height="300"></a>
 		</div>
 		<a href="#x" class="overlay" id="luon"></a>
         <div class="popup">
-			<a href="#q"><img class="is-image" src="images/luon.jpg"></a>
+			<a href="#q"><img class="is-image" src="style/images/stadium/luon.jpg"></a>
         </div>
 		<br>Stade de Lyon
 		<br>UEFA capacity: 59,000
@@ -247,11 +247,11 @@
 		<h2>Stade Velodrome</h2>
 		<div class="image">
 			<a href="#marseille">
-			<img class="image_left" src="images/marseille.jpg" width="520" height="300"></a>
+			<img class="image_left" src="style/images/stadium/marseille.jpg" width="520" height="300"></a>
 		</div>
 		<a href="#x" class="overlay" id="marseille"></a>
         <div class="popup">
-			<a href="#q"><img class="is-image" src="images/marseille.jpg"></a>
+			<a href="#q"><img class="is-image" src="style/images/stadium/marseille.jpg"></a>
         </div>
 		<br>Stade Vélodrome
 		<br>UEFA capacity: 67,000
@@ -269,7 +269,7 @@
 		<h2>Stade de Nice</h2>
 		<div class="image">
 			<a href="#nice_img">
-			<img class="image_right" src="images/nice.jpg" width="520" height="300"></a>
+			<img class="image_right" src="style/images/stadium/nice.jpg" width="520" height="300"></a>
 		</div>
 		<br>Stade de Nice
 		<br>UEFA capacity: 35,000
@@ -285,11 +285,11 @@
 		<h2>Stade Geoffroy Guichard</h2>
 		<div class="image">
 			<a href="#saint">
-			<img class="image_left" src="images/saint.jpg" width="520" height="300"></a>
+			<img class="image_left" src="style/images/stadium/saint.jpg" width="520" height="300"></a>
 		</div>
 		<a href="#x" class="overlay" id="saint"></a>
         <div class="popup">
-			<a href="#q"><img class="is-image" src="images/saint.jpg"></a>
+			<a href="#q"><img class="is-image" src="style/images/stadium/saint.jpg"></a>
         </div>
 		<br>Stade Geoffroy Guichard
 		<br>UEFA capacity: 42,000
@@ -305,11 +305,11 @@
 		<h2>Stadium de Toulouse</h2>
 		<div class="image mask">
 			<a href="#toulouse">
-			<img class="image_right" src="images/toulouse.jpg" width="520" height="300"></a>
+			<img class="image_right" src="style/images/stadium/toulouse.jpg" width="520" height="300"></a>
 		</div>
 		<a href="#x" class="overlay" id="toulouse"></a>
         <div class="popup">
-			<a href="#q"><img class="is-image" src="images/toulouse.jpg"></a>
+			<a href="#q"><img class="is-image" src="style/images/stadium/toulouse.jpg"></a>
         </div>
 		<br>Stadium de Toulouse
 		<br>UEFA capacity: 33,000
@@ -335,7 +335,7 @@
 			<td>Point</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupA/fra.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupA/fra.png" width="15" height="15"></td>
 			<td>France</td>
 			<td>1</td>
 			<td>1</td>
@@ -344,7 +344,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupA/sui.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupA/sui.png" width="15" height="15"></td>
 			<td>Switzerland</td>
 			<td>1</td>
 			<td>1</td>
@@ -353,7 +353,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupA/alb.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupA/alb.png" width="15" height="15"></td>
 			<td>Albania</td>
 			<td>1</td>
 			<td>0</td>
@@ -362,7 +362,7 @@
 			<td>0</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupA/rou.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupA/rou.png" width="15" height="15"></td>
 			<td>Romania</td>
 			<td>1</td>
 			<td>0</td>
@@ -385,7 +385,7 @@
 			<td>Point</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupB/svk.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupB/svk.png" width="15" height="15"></td>
 			<td>Slovakia</td>
 			<td>2</td>
 			<td>1</td>
@@ -394,7 +394,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupB/wal.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupB/wal.png" width="15" height="15"></td>
 			<td>Wales</td>
 			<td>1</td>
 			<td>1</td>
@@ -403,7 +403,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupB/eng.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupB/eng.png" width="15" height="15"></td>
 			<td>England</td>
 			<td>1</td>
 			<td>0</td>
@@ -412,7 +412,7 @@
 			<td>1</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupB/rus.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupB/rus.png" width="15" height="15"></td>
 			<td>Russia</td>
 			<td>2</td>
 			<td>0</td>
@@ -435,7 +435,7 @@
 			<td>Point</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupC/ger.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupC/ger.png" width="15" height="15"></td>
 			<td>Germany</td>
 			<td>1</td>
 			<td>1</td>
@@ -444,7 +444,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupC/pol.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupC/pol.png" width="15" height="15"></td>
 			<td>Poland</td>
 			<td>1</td>
 			<td>1</td>
@@ -453,7 +453,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupC/nir.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupC/nir.png" width="15" height="15"></td>
 			<td>Northern Ireland</td>
 			<td>1</td>
 			<td>0</td>
@@ -462,7 +462,7 @@
 			<td>0</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupC/ukr.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupC/ukr.png" width="15" height="15"></td>
 			<td>Ukraine</td>
 			<td>1</td>
 			<td>0</td>
@@ -485,7 +485,7 @@
 			<td>Point</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupD/cro.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupD/cro.png" width="15" height="15"></td>
 			<td>Croatia</td>
 			<td>1</td>
 			<td>1</td>
@@ -494,7 +494,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupD/esp.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupD/esp.png" width="15" height="15"></td>
 			<td>Spain</td>
 			<td>1</td>
 			<td>1</td>
@@ -503,7 +503,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupD/cze.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupD/cze.png" width="15" height="15"></td>
 			<td>Czech Republic</td>
 			<td>1</td>
 			<td>0</td>
@@ -512,7 +512,7 @@
 			<td>0</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupD/tur.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupD/tur.png" width="15" height="15"></td>
 			<td>Turkey</td>
 			<td>1</td>
 			<td>0</td>
@@ -535,7 +535,7 @@
 			<td>Point</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupE/ita.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupE/ita.png" width="15" height="15"></td>
 			<td>Italy</td>
 			<td>1</td>
 			<td>1</td>
@@ -544,7 +544,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupE/swe.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupE/swe.png" width="15" height="15"></td>
 			<td>Sweden</td>
 			<td>1</td>
 			<td>0</td>
@@ -553,7 +553,7 @@
 			<td>1</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupE/irl.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupE/irl.png" width="15" height="15"></td>
 			<td>Republic of Ireland</td>
 			<td>1</td>
 			<td>0</td>
@@ -562,7 +562,7 @@
 			<td>1</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupE/bel.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupE/bel.png" width="15" height="15"></td>
 			<td>Belgium</td>
 			<td>1</td>
 			<td>0</td>
@@ -585,7 +585,7 @@
 			<td>Point</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupF/hun.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupF/hun.png" width="15" height="15"></td>
 			<td>Hungary</td>
 			<td>1</td>
 			<td>1</td>
@@ -594,7 +594,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupF/por.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupF/por.png" width="15" height="15"></td>
 			<td>Portugal</td>
 			<td>1</td>
 			<td>0</td>
@@ -603,7 +603,7 @@
 			<td>1</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupF/isl.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupF/isl.png" width="15" height="15"></td>
 			<td>Iceland</td>
 			<td>1</td>
 			<td>0</td>
@@ -612,7 +612,7 @@
 			<td>1</td>
 		</tr>
 		<tr>
-			<td id="center_style_image"><img src="images/country/groupF/aut.png" width="15" height="15"></td>
+			<td id="center_style_image"><img src="style/images/country/groupF/aut.png" width="15" height="15"></td>
 			<td>Austria</td>
 			<td>1</td>
 			<td>0</td>
