@@ -15,8 +15,8 @@ h4 {
 .about,
 .stadium,
 .group,
-.group_stage,
-.favorite_team {
+.group-stage,
+.favorite-team {
 	margin: 25px;
 	float: left;
 	border-style: solid;
@@ -31,7 +31,7 @@ h4 {
 .about a,
 .stadium a,
 .group a,
-.group_stage a,
+.group-stage a,
 .favorite_team a {
 	text-decoration: none;
 }
@@ -40,7 +40,10 @@ a {
 	color: #317bb9;
 }
 
-
+.on-top {
+	width: 15px;
+	height: 15px;
+}
 
 a:hover {
 	color: red;
@@ -56,32 +59,38 @@ a:hover {
 	margin-right: 25px;
 }
 
-.block_host,
-.block_stadium,
+.block-host,
+.block-stadium,
 .team,
-.team_sort {
+.team-sort {
 	float: left;
 	border-style: solid;
 	border-color: #317bb9;
 	padding: 5px;
 	border-radius: 10px;
 	background-color: white;
-	margin-top: 5px;
-	margin-left: 25px;
-	margin-right: 25px;
-	margin-bottom: 50px;
+	margin: 5px 25px 50px;
 	width: 95%;
 	display: none;
 }
 
-.image_left {
+.image-left {
+	width: 520px;
+	height: 300px;
 	float: left;
 	margin: 20px;
 }
 
-.image_right {
+.image-right {
+	width: 520px;
+	height: 300px;
 	float: right;
 	margin: 20px;
+}
+
+.table-image-country {
+	width: 15px;
+	height: 15px;
 }
 
 h2 {
@@ -89,36 +98,28 @@ h2 {
 }
 
 /*Стили блоков групп*/
-.block_group1,
-.block_group3,
-.block_group5 {
+.block-group1,
+.block-group3,
+.block-group5 {
 	float: left;
-	border-style: solid;
-	border-color: #317bb9;
+	border:3px solid #317bb9;
 	padding: 5px;
 	border-radius: 10px;
 	background-color: white;
-	margin-top: 5px;
-	margin-left: 25px;
-	margin-right: 158px;
-	margin-bottom: 50px;
+	margin: 5px 158px 50px 25px;
 	width: 40%;
 	display: none;
 }
 
-.block_group2,
-.block_group4,
-.block_group6 {
+.block-group2,
+.block-group4,
+.block-group6 {
 	float: left;
-	border-style: solid;
-	border-color: #317bb9;
+	border:3px solid #317bb9;
 	padding: 5px;
 	border-radius: 10px;
 	background-color: white;
-	margin-top: 5px;
-	margin-left: 25px;
-	margin-right: 25px;
-	margin-bottom: 50px;
+	margin: 5px 25px 50px;
 	width: 40%;
 	display: none;
 }
@@ -147,28 +148,29 @@ hr {
 }
 
 td {
+	border:1px dashed black;
 	text-align: left;
 	margin: 2px;
 }
 
 table {
-	border:1px;
-	border-style: solid;
+	border:1px solid black;
 	border-collapse: collapse;
 	text-align: center;
 	width: 100%;
 }
 
-.center_style td {
+.center-style td {
 	text-align: center;
 }
 
-.center_style_image {
+.center-style-image {
 	text-align: center;
 	border: 0px;
 }
+
 /*Выпадающий список*/
-.right {
+.right-ul {
 	margin-right: 90%;
 }
 
@@ -197,25 +199,30 @@ ul {
     display: block;
     list-style: square;
 }
+
 ul:after {
     display: block;
     content: ' ';
     clear: both;
     float: none;
 }
+
 ul.menu > li {
     float: left;
     position: relative;
 }
+
 ul.menu > li > a {
     display: block;
     color: white;
     background-color: #317bb9;
     text-decoration: none;
 }
+
 ul.menu > li > a:hover {
     background-color: black;
 }
+
 ul.submenu {
     display: none;
     position: absolute;
@@ -226,9 +233,11 @@ ul.submenu {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
+
 ul.submenu > li {
     display: block;
 }
+
 ul.submenu > li > a {
     display: block;
     padding: 10px;
@@ -237,11 +246,7 @@ ul.submenu > li > a {
     text-decoration: none;
 }
 
-.p_right {
-	text-align: right;
-}
-
-.create_profile,
+.create-profile,
 .profile {
 	float: left;
 	border-style: solid;
@@ -249,71 +254,71 @@ ul.submenu > li > a {
 	padding: 5px;
 	border-radius: 10px;
 	background-color: white;
-	margin-top: 5px;
-	margin-left: 25px;
-	margin-bottom: 50px;
+	margin: 5px 0px 50px 25px;
 	width: 40%;
 	display: none;
 }
 
-.create_profile {
+.create-profile {
 	margin-right: 157px;
 }
 
 /*форма*/
 
 a.save {
-  font-weight: 700;
-  color: white;
-  text-decoration: none;
-  padding: .8em 1em calc(.8em + 3px);
-  border-radius: 3px;
-  background: rgb(64,199,129);
-  box-shadow: 0 -3px rgb(53,167,110) inset;
-  transition: 0.2s;
+	font-weight: 700;
+	color: white;
+	text-decoration: none;
+	padding: .8em 1em calc(.8em + 3px);
+	border-radius: 3px;
+	background: rgb(64,199,129);
+	box-shadow: 0 -3px rgb(53,167,110) inset;
+	transition: 0.2s;
 } 
+
 a.save:hover { 
 	background: rgb(53, 167, 110); 
 }
+
 a.save:active {
-  background: rgb(33,147,90);
-  box-shadow: 0 3px rgb(33,147,90) inset;
+	background: rgb(33,147,90);
+	box-shadow: 0 3px rgb(33,147,90) inset;
 }
 
 a.cancel {
-  font-weight: 700;
-  color: white;
-  text-decoration: none;
-  padding: .8em 1em calc(.8em + 3px);
-  border-radius: 3px;
-  background: rgb(248,93,89);
-  box-shadow: 0 -3px rgb(244,52,47) inset;
-  transition: 0.2s;
+	font-weight: 700;
+	color: white;
+	text-decoration: none;
+	padding: .8em 1em calc(.8em + 3px);
+	border-radius: 3px;
+	background: rgb(248,93,89);
+	box-shadow: 0 -3px rgb(244,52,47) inset;
+	transition: 0.2s;
 } 
+
 a.cancel:hover { 
 	background: rgb(244,52,47); 
 }
+
 a.cancel:active {
-  background: rgb(201,18,13);
-  box-shadow: 0 3px rgb(201,18,13) inset;
+	background: rgb(201,18,13);
+	box-shadow: 0 3px rgb(201,18,13) inset;
 }
 
 /**/
-.block_stadium a {
+.block-stadium a {
 	text-decoration:none;
 }
 /*Увеичени картинки при навиднии*/
 
 .image img {
- -moz-transition: all 1s ease-out;
- -o-transition: all 1s ease-out;
- -webkit-transition: all 1s ease-out;
+	transition: all 1s ease-out;
+
  }
 
-.image img:hover{
- -webkit-transform: scale(1.1);
- -moz-transform: scale(1.1);
- -o-transform: scale(1.1);
+.image img:hover {
+	transform: scale(1.1);
+
  }
 /*Удаление блока*/
 .close {
@@ -339,6 +344,7 @@ a.cancel:active {
 .overlay:target {
     display: block;
 }
+
 .popup {
     top: -100%;
     right: 0;
@@ -352,13 +358,12 @@ a.cancel:active {
     position: fixed;
     padding: 15px;
 }
+
 .overlay:target+.popup {
-    -webkit-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
     top: 20%;
 }
+
 .popup img {
     width: auto;
     height: auto;
@@ -368,5 +373,13 @@ a.cancel:active {
 
 /*Выбор блоков для обмена их*/
 div.change {
-  border-color: red;
+	border-color: red;
+}
+/*Кнопки лево и право*/
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
 }

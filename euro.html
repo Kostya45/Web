@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<title>EURO 2016</title>
-	<link rel="stylesheet" type="text/css" href="style/css/style.css">
+	<link rel="stylesheet" href="style/css/style.css">
 	<link rel="icon" href="style/icon/euro2016.ico" type="image/x-icon">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -12,33 +12,34 @@
 <header class="head">
 	<ul id="menu">
 		<li></li>
-		<li class="right">
+		<li class="right-ul">
 			<a href="#">Menu</a>
         		<ul class="submenu">
-            	<li id='click_team'><a href="#q">Chose team</a></li>
-            	<li><a href="#w" onclick="show_all();">Show all</a></li>
-            	<li><a href="#e" onclick="hide_all();">Hide all</a></li>
-            	<li id='s_img'><a href="#r">Show img</a></li>
-            	<li id='h_img'><a href="#t">Hide img</a></li>
-            	<li><a href="#creat_profile" onclick="show_creativ_profile();">Create Profile</a></li>
-            	<li><a href="#profile" onclick="profile_name();">Show Profile</a></li>
-            	<li><a href="#" id='close_window'>Go out</a></li>
+            	<li id='click-team'><a href="#q">Chose team</a></li>
+            	<li id="show"><a href="#w">Show all</a></li>
+            	<li id="hide"><a href="#e">Hide all</a></li>
+            	<li id='s-img'><a href="#r">Show img</a></li>
+            	<li id='h-img'><a href="#t">Hide img</a></li>
+            	<li id="create-pro"><a href="#creat-profile">Create Profile</a></li>
+            	<li id="profile-show"><a href="#profile">Show Profile</a></li>
+            	<li id="out"><a href="#" id='close-window'>Go out</a></li>
         		</ul>
     	</li>
-		<li><a href="#">On top <img src="style/images/icons/up.png" width="15" height="15" alt="on top"> </a></li>
+		<li><a href="#">On top <img class="on-top" src="style/images/icons/up.png" alt="on top"> </a></li>
 	</ul>
 </header>
 <h1 id="fteam">name</h1>
 <hr> 
 <div class="replace">
-	<div class="about block_all_hide div" id="Div1">
+	<div class="about block-all-hide div" id="Div1">
 		<a href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);"><img class="close" src="style/images/icons/close.png" alt="close block"></a>
 		<h4>UEFA EURO 2016: France</h4>
 		<hr>
 		<p>A new dimension will be added to European football's premier international competition at UEFA EURO 2016.</p>
-		<p id="block_about"><a href="#" onclick="block_show_about();">Lear more...</a></p>
+		<p class="left"><a href="#" id='show-host'>Lear more...</a></p>
+		<p class="right"><a href="#" id='hide-host'>Hide more...</a></p>
 	</div>
-	<div class="stadium block_all_hide" id="Div2">
+	<div class="stadium block-all-hide" id="Div2">
 		<a href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);"><img class="close" src="style/images/icons/close.png" alt="close block"></a>
 		<h4>Main Stadium</h4>
 		<hr>
@@ -49,9 +50,10 @@
 			<li>Stade Bollaert-Delelis</li>
 			<li>Stade Pierre Mauroy...</li>
 		</ul>
-		<p id="block_stadium"><a href="#" onclick="block_show_stadium();">Learn more...</a></p>
+		<p class="left"><a href="#" id="show-stadium">Learn more...</a></p>
+		<p class="right"><a href="#" id='hide-stadium'>Hide more...</a></p>
 	</div>
-	<div class="group block_all_hide" id="Div3">
+	<div class="group block-all-hide" id="Div3">
 		<a href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);"><img class="close" src="style/images/icons/close.png" alt="close block"></a>
 		<h4>Team of the Euro 2016</h4>
 		<hr>
@@ -62,9 +64,10 @@
 			<li>Spain</li>
 			<li>Ukraine...</li>
 		</ul>
-		<p id="sort_block"><a href="#" onclick="show_team_sort();">Learn more...</a></p>
+		<p class="left"><a href="#" id="sort-block">Learn more...</a></p>
+		<p class="right"><a href="#" id='sort-hide'>Hide more...</a></p>
 	</div>
-	<div class="group_stage block_all_hide" id="Div4">
+	<div class="group-stage block-all-hide" id="Div4">
 		<a href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);"><img class="close" src="style/images/icons/close.png" alt="close block"></a>
 		<h4>Group Stage</h4>
 		<hr>
@@ -75,19 +78,21 @@
 			<li>Spain</li>
 			<li>Ukraine</li>
 		</ul>
-		<p id="group_stage"><a href="#" onclick="block_show_group();">Learn more...</a></p>
+		<p class="left"><a href="#" id="show-table">Learn more...</a></p>
+		<p class="right"><a href="#" id='hide-table'>Hide more...</a></p>
 	</div>
-	<div class="favorite_team block_all_hide" id="Div5">
+	<div class="favorite-team block-all-hide" id="Div5">
 	    <a href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);"><img class="close" src="style/images/icons/close.png" alt="close block"></a>
 		<h4 id="favteam">Favorite team</h4>
 		<hr>
 		<p>A new dimension will be added to European football's premier international competition at UEFA EURO 2016.</p>
-		<p id="show_about_team_all"><a href="#" onclick="about_team_show()">Learn more...</a></p>
+		<p class="left"><a href="#" id="show-fav">Learn more...</a></p>
+		<p class="right"><a href="#" id='hide-fav'>Hide more...</a></p>
 	</div>
 </div>
-<div class="block_host show_all" id="host">
+<div class="block-host show-all" id="host">
 	<h1>France</h1>
-	<div class="image"><a href=""><img class="image_left" src="style/images/flag/france.jpg" width="200" height="150" alt="Flag France"></a></div>
+	<div class="image"><a href="#2"><img class="image-left" src="style/images/flag/france.jpg" width="200" height="150" alt="Flag France"></a></div>
 	<p><br>Population: 66,000,000
 		<br>Area: 552,000 square kilometres
 		<br>Currency: Euro
@@ -108,25 +113,25 @@
 	Platini's emergence ushered in the next apogee, the three-time Ballon d'Or winner never more potent than at the 1984 UEFA European Championship when the hosts prevailed. His tally of nine finals goals, from midfield, has never been bettered – similarly, Fontaine's 1958 haul of 13 remains a World Cup record. Then there is Zidane, 'Zizou', the driving force behind France's pre-eminence at the turn of the century. Kopa, Platini, Zidane, men with roots in Poland, Italy and Algeria – France the melting pot.
 </div>
 <br>
-<div class="block_stadium show_all" id="block_stadium_show">
+<div class="block-stadium show-all" id="block-stadium-show">
 	<h1>Stadium</h1>
 	<ul>
-		<li><a href="#parc_des_prines">Parc des Princes</a></li>
-		<li><a href="#stade_de_france">Stade de France</a></li>
-		<li><a href="#stade_de_bordeaux">Stade de Bordeaux</a></li>
-		<li><a href="#stade_bollaert_delelis">Stade Bollaert-Delelis</a></li>
-		<li><a href="#stade_pierre_mauroy">Stade Pierre Mauroy</a></li>
-		<li><a href="#stade_de_lyon">Stade de Lyon</a></li>
-		<li><a href="#stade_de_lyon">Stade Velodrome</a></li>
-		<li><a href="#stade_de_nice">Stade de Nice</a></li>
-		<li><a href="#stade_geoffroy_guichard">Stade Geoffroy Guichard</a></li>
-		<li><a href="#stade_de_toulouse">Stadium de Toulouse</a></li>
+		<li><a href="#parc-des-prines">Parc des Princes</a></li>
+		<li><a href="#stade-de-france">Stade de France</a></li>
+		<li><a href="#stade-de-bordeaux">Stade de Bordeaux</a></li>
+		<li><a href="#stade-bollaert-delelis">Stade Bollaert-Delelis</a></li>
+		<li><a href="#stade-pierre-mauroy">Stade Pierre Mauroy</a></li>
+		<li><a href="#stade-de-lyon">Stade de Lyon</a></li>
+		<li><a href="#stade-velodrome">Stade Velodrome</a></li>
+		<li><a href="#stade-de-nice">Stade de Nice</a></li>
+		<li><a href="#stade-geoffroy-guichard">Stade Geoffroy Guichard</a></li>
+		<li><a href="#stade-de-toulouse">Stadium de Toulouse</a></li>
 	</ul>
-	<p id="parc_des_prines">
+	<p id="parc-des-prines">
 		<h2>Parc des Princes</h2>
 		<div class="image">
 			<a href="#parc">
-			<img class="image_left" src="style/images/stadium/paris.jpg" width="520" height="300" alt="Image Stadium Parc des Princes"></a>
+			<img class="image-left" src="style/images/stadium/paris.jpg" alt="Image Stadium Parc des Princes"></a>
 		</div>
 		<a href="#x" class="overlay" id="parc"></a>
         <div class="popup">
@@ -144,13 +149,13 @@
 		<p>The first part of the renovation work being carried out was completed in summer 2014, with two new rows of seats added closer to the pitch, as well as new substitutes' benches and brand new executive boxes and lounges.
 		<p>The renovation of the Parc des Princes, which improved services for the general public while also boosting the capacity to 45,000, was completed in 2015.
 	</p>
-	<p id="stade_de_france">
+	<p id="stade-de-france">
 		<h2>Stade de France</h2>
 		<div class="image">
 			<a href="#saint_denis">
-			<img class="image_right" src="style/images/stadium/saint-denis.jpg" width="520" height="300" alt="Image Stadium Stade de France"></a>
+			<img class="image-right" src="style/images/stadium/saint-denis.jpg" alt="Image Stadium Stade de France"></a>
 		</div>
-		<a href="#x" class="overlay" id="saint_denis"></a>
+		<a href="#x" class="overlay" id="saint-denis"></a>
         <div class="popup">
 			<a href="#q"><img class="is-image" src="style/images/stadium/saint-denis.jpg" alt="Image Stadium Stade de France"></a>
         </div>
@@ -164,10 +169,10 @@
 		<p>The arena has staged two UEFA Champions League finals, Real Madrid CF's 3-0 win against Valencia CF in 2000 and FC Barcelona's 2-1 triumph over Arsenal FC six years later.
 		<p>U2 held three dates of their U2 360° Tour at the Stade de France in 2009 and 2010, attracting an aggregate attendance of 283,084.
 	</p>
-	<p id="stade_de_bordeaux">
+	<p id="stade-de-bordeaux">
 		<h2>Stade de Bordeaux</h2>
 		<div class="image">
-			<a href="#bord"><img class="image_left" src="style/images/stadium/bordelux.jpg" width="520" height="300" alt="Image Stadium Stade de Bordeaux"></a>
+			<a href="#bord"><img class="image-left" src="style/images/stadium/bordelux.jpg" alt="Image Stadium Stade de Bordeaux"></a>
 		</div>
 		<a href="#x" class="overlay" id="bord"></a>
         <div class="popup">
@@ -182,11 +187,11 @@
 		<p>The effect is a venue which Bordeaux's mayor Alain Juppe described as "a piece of art which will enrich our cultural heritage" at the arena's inauguration in May 2015.
 		<p>Located between a man-made lake and the Garonne river in north Bordeaux, it has replaced the Stade Chaban-Delmas – venue for games at the 1938 and 1998 FIFA World Cups – as home for the Girondins.
 	</p>
-	<p id="stade_bollaert_delelis">
+	<p id="stade-bollaert-delelis">
 		<h2>Stade Bollaert-Delelis</h2>
 		<div class="image">
 			<a href="#lens">
-			<img class="image_right" src="style/images/stadium/lens.jpg" width="520" height="300" alt="Image Stadium Stade Bollaert-Delelis"></a>
+			<img class="image-right" src="style/images/stadium/lens.jpg" alt="Image Stadium Stade Bollaert-Delelis"></a>
 		</div>
 		<a href="#x" class="overlay" id="lens"></a>
         <div class="popup">
@@ -202,11 +207,11 @@
 		<p>The stadium underwent renovation work and improvements ahead of both the 1984 UEFA European Championship and 1998 FIFA World Cup, and was also used during the 2007 Rugby World Cup. The rebuilding programme ahead of UEFA EURO 2016 will last until late 2015.
 		<p>Stade Bollaert-Delelis holds the rare distinction of being able to accommodate almost the entire population of the town where it is located, with Lens home to around 36,000 inhabitants.
 	</p>
-	<p id="stade_pierre_mauroy">
+	<p id="stade-pierre-mauroy">
 		<h2>Stade Pierre Mauroy</h2>
 		<div class="image">
 			<a href="#lil">
-			<img class="image_left" src="style/images/stadium/lil.png" width="520" height="300" alt="Image Stadium Stade Pierre Mauroy"></a>
+			<img class="image-left" src="style/images/stadium/lil.png" alt="Image Stadium Stade Pierre Mauroy"></a>
 		</div>
 		<a href="#x" class="overlay" id="lil"></a>
         <div class="popup">
@@ -222,11 +227,11 @@
 		<p>The arena's retractable roof can be opened or closed in 30 minutes, while half of the pitch can be raised above the other for use in music performances and other sports.
  		<p>Constructed by the company behind the Millau Viaduct in Aveyron, the capacity is more than double that of LOSC's previous homes, Stade Grimonprez-Jooris and Stadium Lille Métropole.
 	</p>
-	<p id="stade_de_lyon">
+	<p id="stade-de-lyon">
 		<h2>Stade de Lyon</h2>
 		<div class="image">
 			<a href="#luon">
-			<img class="image_right" src="style/images/stadium/luon.jpg" width="520" height="300" alt="Image Stadium Stade de Lyon"></a>
+			<img class="image-right" src="style/images/stadium/luon.jpg" alt="Image Stadium Stade de Lyon"></a>
 		</div>
 		<a href="#x" class="overlay" id="luon"></a>
         <div class="popup">
@@ -243,11 +248,11 @@
 		<p>The Stade de Gerland was also a venue for the 1998 FIFA World Cup, staging Croatia's 3-0 quarter-final victory over Germany.
 		<p>The stadium staged its first game on 9 January 2016, when Olympique Lyonnais beat Troyes 4-1 in Ligue 1.
 	</p>
-	<p id="stade_velodrome">
+	<p id="stade-velodrome">
 		<h2>Stade Velodrome</h2>
 		<div class="image">
 			<a href="#marseille">
-			<img class="image_left" src="style/images/stadium/marseille.jpg" width="520" height="300" alt="Image Stadium Stade Velodrome"></a>
+			<img class="image-left" src="style/images/stadium/marseille.jpg" alt="Image Stadium Stade Velodrome"></a>
 		</div>
 		<a href="#x" class="overlay" id="marseille"></a>
         <div class="popup">
@@ -265,11 +270,11 @@
 		<p>Stade Vélodrome staged matches at the 1938 and 1998 FIFA World Cups, with its capacity increased to 60,000 for the latter tournament; it also hosted games at the 1960 and 1984 UEFA European Championships.
 		<p>Located in the south of the city, on the north bank of the Huveaune river, the Vélodrome has regularly been used as a concert venue since the 1980s and has also hosted political rallies.
 	</p>
-	<p id="stade_de_nice">
+	<p id="stade-de-nice">
 		<h2>Stade de Nice</h2>
 		<div class="image">
-			<a href="#nice_img">
-			<img class="image_right" src="style/images/stadium/nice.jpg" width="520" height="300" alt="Image Stadium Stade de Nice"></a>
+			<a href="#nice-img">
+			<img class="image-right" src="style/images/stadium/nice.jpg" alt="Image Stadium Stade de Nice"></a>
 		</div>
 		<br>Stade de Nice
 		<br>UEFA capacity: 35,000
@@ -281,11 +286,11 @@
 		<p>He sixth largest football stadium in France also houses the Musée National du Sport (National Sport Museum), which moved to the Côte d'Azur from Paris and was officially inaugurated on 15 October 2014 in the company of the French sports minister, Patrick Kanner. More than 45,000 pieces and 400,000 documents, comprising one of the largest collections in the world, are now on show in the venue designed by Jean-Michel Wilmotte.
 		<p>The arena will likewise host rugby games, concerts and various other events with congress facilities also available to ensure 24/7 exploitation of the premises, located just 6km from France's fifth-biggest city's airport and within a 15-minute drive of the city centre.
 	</p>
-	<p id="stade_geoffroy_guichard">
+	<p id="stade-geoffroy-guichard">
 		<h2>Stade Geoffroy Guichard</h2>
 		<div class="image">
 			<a href="#saint">
-			<img class="image_left" src="style/images/stadium/saint.jpg" width="520" height="300" alt="Image Stadium Stade Geoffroy Guichard"></a>
+			<img class="image-left" src="style/images/stadium/saint.jpg" alt="Image Stadium Stade Geoffroy Guichard"></a>
 		</div>
 		<a href="#x" class="overlay" id="saint"></a>
         <div class="popup">
@@ -301,11 +306,11 @@
 		<p>The venue, host to the 2015 Match of Poverty, staged matches at the 1984 UEFA European Championship, 1998 FIFA World Cup and 2007 Rugby World Cup, undergoing renovation work in the run-up to each tournament.</p>
 		<p>Famed in the past for an 'English-style' design due to its four separate stands, the ground has had a facelift and enlarged its capacity to 41,500 while also making the venue more eco-friendly. The work was done with AS Saint-Étienne in situ and was completed in late 2014.
 	</p>
-	<p id="stade_de_toulouse">
+	<p id="stade-de-toulouse">
 		<h2>Stadium de Toulouse</h2>
 		<div class="image mask">
 			<a href="#toulouse">
-			<img class="image_right" src="style/images/stadium/toulouse.jpg" width="520" height="300" alt="Image Stadium Stadium de Toulouse"></a>
+			<img class="image-right" src="style/images/stadium/toulouse.jpg" alt="Image Stadium Stadium de Toulouse"></a>
 		</div>
 		<a href="#x" class="overlay" id="toulouse"></a>
         <div class="popup">
@@ -322,10 +327,10 @@
 		<p>In addition to football, the ground regularly holds rugby matches, and was a venue for the 2007 Rugby World Cup.
 	</p>
 </div>
-<div class="block_group1 show_all rez" id="block_group1">
+<div class="block-group1 show-all rez" id="block-group1">
 	<h4>Group A</h4>
 	<table>
-		<tr class="center_style">
+		<tr class="center-style">
 			<td></td>
 			<td>Country</td>
 			<td>Played</td>
@@ -335,7 +340,7 @@
 			<td>Point</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupA/fra.png" width="15" height="15" alt="fra"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupA/fra.png" alt="fra"></td>
 			<td>France</td>
 			<td>1</td>
 			<td>1</td>
@@ -344,7 +349,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupA/sui.png" width="15" height="15" alt="sui"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupA/sui.png" alt="sui"></td>
 			<td>Switzerland</td>
 			<td>1</td>
 			<td>1</td>
@@ -353,7 +358,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupA/alb.png" width="15" height="15" alt="alb"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupA/alb.png" alt="alb"></td>
 			<td>Albania</td>
 			<td>1</td>
 			<td>0</td>
@@ -362,7 +367,7 @@
 			<td>0</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupA/rou.png" width="15" height="15" alt="rou"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupA/rou.png" alt="rou"></td>
 			<td>Romania</td>
 			<td>1</td>
 			<td>0</td>
@@ -372,10 +377,10 @@
 		</tr>
 	</table>
 </div>
-<div class="block_group2 show_all rez" id="block_group2">
+<div class="block-group2 show-all rez" id="block-group2">
 	<h4>Group B</h4>
 	<table>
-		<tr class="center_style">
+		<tr class="center-style">
 			<td></td>
 			<td>Country</td>
 			<td>Played</td>
@@ -385,7 +390,7 @@
 			<td>Point</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupB/svk.png" width="15" height="15" alt="svk"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupB/svk.png" alt="svk"></td>
 			<td>Slovakia</td>
 			<td>2</td>
 			<td>1</td>
@@ -394,7 +399,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupB/wal.png" width="15" height="15" alt="wal"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupB/wal.png" alt="wal"></td>
 			<td>Wales</td>
 			<td>1</td>
 			<td>1</td>
@@ -403,7 +408,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupB/eng.png" width="15" height="15" alt="eng"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupB/eng.png" alt="eng"></td>
 			<td>England</td>
 			<td>1</td>
 			<td>0</td>
@@ -412,7 +417,7 @@
 			<td>1</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupB/rus.png" width="15" height="15" alt="rus"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupB/rus.png" alt="rus"></td>
 			<td>Russia</td>
 			<td>2</td>
 			<td>0</td>
@@ -422,10 +427,10 @@
 		</tr>
 	</table>
 </div>
-<div class="block_group3 show_all rez" id="block_group3">
+<div class="block-group3 show-all rez" id="block-group3">
 	<h4>Group C</h4>
 	<table>
-		<tr class="center_style">
+		<tr class="center-style">
 			<td></td>
 			<td>Country</td>
 			<td>Played</td>
@@ -435,7 +440,7 @@
 			<td>Point</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupC/ger.png" width="15" height="15" alt="ger"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupC/ger.png" alt="ger"></td>
 			<td>Germany</td>
 			<td>1</td>
 			<td>1</td>
@@ -444,7 +449,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupC/pol.png" width="15" height="15" alt="pol"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupC/pol.png" alt="pol"></td>
 			<td>Poland</td>
 			<td>1</td>
 			<td>1</td>
@@ -453,7 +458,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupC/nir.png" width="15" height="15" alt="nir"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupC/nir.png" alt="nir"></td>
 			<td>Northern Ireland</td>
 			<td>1</td>
 			<td>0</td>
@@ -462,7 +467,7 @@
 			<td>0</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupC/ukr.png" width="15" height="15" alt="ukr"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupC/ukr.png" alt="ukr"></td>
 			<td>Ukraine</td>
 			<td>1</td>
 			<td>0</td>
@@ -472,10 +477,10 @@
 		</tr>
 	</table>
 </div>
-<div class="block_group4 show_all rez" id="block_group4">
+<div class="block-group4 show-all rez" id="block-group4">
 	<h4>Group D</h4>
 	<table>
-		<tr class="center_style">
+		<tr class="center-style">
 			<td></td>
 			<td>Country</td>
 			<td>Played</td>
@@ -485,7 +490,7 @@
 			<td>Point</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupD/cro.png" width="15" height="15" alt="cro"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupD/cro.png" alt="cro"></td>
 			<td>Croatia</td>
 			<td>1</td>
 			<td>1</td>
@@ -494,7 +499,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupD/esp.png" width="15" height="15" alt="esp"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupD/esp.png" alt="esp"></td>
 			<td>Spain</td>
 			<td>1</td>
 			<td>1</td>
@@ -503,7 +508,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupD/cze.png" width="15" height="15" alt="cze"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupD/cze.png" alt="cze"></td>
 			<td>Czech Republic</td>
 			<td>1</td>
 			<td>0</td>
@@ -512,7 +517,7 @@
 			<td>0</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupD/tur.png" width="15" height="15" alt="tur"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupD/tur.png" alt="tur"></td>
 			<td>Turkey</td>
 			<td>1</td>
 			<td>0</td>
@@ -522,10 +527,10 @@
 		</tr>
 	</table>
 </div>
-<div class="block_group5 show_all rez" id="block_group5">
+<div class="block-group5 show-all rez" id="block-group5">
 	<h4>Group E</h4>
 	<table>
-		<tr class="center_style">
+		<tr class="center-style">
 			<td></td>
 			<td>Country</td>
 			<td>Played</td>
@@ -535,7 +540,7 @@
 			<td>Point</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupE/ita.png" width="15" height="15" alt="ita"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupE/ita.png" alt="ita"></td>
 			<td>Italy</td>
 			<td>1</td>
 			<td>1</td>
@@ -544,7 +549,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupE/swe.png" width="15" height="15" alt="swe"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupE/swe.png" alt="swe"></td>
 			<td>Sweden</td>
 			<td>1</td>
 			<td>0</td>
@@ -553,7 +558,7 @@
 			<td>1</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupE/irl.png" width="15" height="15" alt="irl"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupE/irl.png" alt="irl"></td>
 			<td>Republic of Ireland</td>
 			<td>1</td>
 			<td>0</td>
@@ -562,7 +567,7 @@
 			<td>1</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupE/bel.png" width="15" height="15" alt="bel"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupE/bel.png" alt="bel"></td>
 			<td>Belgium</td>
 			<td>1</td>
 			<td>0</td>
@@ -572,10 +577,10 @@
 		</tr>
 	</table>
 </div>
-<div class="block_group6 show_all rez" id="block_group6">
+<div class="block-group6 show-all rez" id="block-group6">
 	<h4>Group F</h4>
 	<table>
-		<tr class="center_style">
+		<tr class="center-style">
 			<td></td>
 			<td>Country</td>
 			<td>Played</td>
@@ -585,7 +590,7 @@
 			<td>Point</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupF/hun.png" width="15" height="15" alt="hun"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupF/hun.png" alt="hun"></td>
 			<td>Hungary</td>
 			<td>1</td>
 			<td>1</td>
@@ -594,7 +599,7 @@
 			<td>3</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupF/por.png" width="15" height="15" alt="por"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupF/por.png" alt="por"></td>
 			<td>Portugal</td>
 			<td>1</td>
 			<td>0</td>
@@ -603,7 +608,7 @@
 			<td>1</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupF/isl.png" width="15" height="15" alt="isl"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupF/isl.png" alt="isl"></td>
 			<td>Iceland</td>
 			<td>1</td>
 			<td>0</td>
@@ -612,7 +617,7 @@
 			<td>1</td>
 		</tr>
 		<tr>
-			<td class="center_style_image"><img src="style/images/country/groupF/aut.png" width="15" height="15" alt="aut"></td>
+			<td class="center-style-image"><img class="table-image-country" src="style/images/country/groupF/aut.png" alt="aut"></td>
 			<td>Austria</td>
 			<td>1</td>
 			<td>0</td>
@@ -622,9 +627,9 @@
 		</tr>
 	</table>
 </div>
-<div class="team show_all" id="about_team">
+<div class="team show_all" id="about-team">
 	<h1>Germany</h1>
-	<div id="about_team_ger">
+	<div id="about-team-ger">
 		<p>
 		<br>Best result: winners 1972, 1980 (as West Germany), 1996
 		<br>Coach: Joachim Low
@@ -644,7 +649,7 @@
 		</p>
 	</div>
 </div>
-<div class="create_profile show_all" id="creat_profile">
+<div class="create-profile show-all" id="creat-profile">
 	<h2>Create/Edit profile</h2>
 	<form name="Profile">
 		<p><b>Your name</b><br>
@@ -681,20 +686,20 @@
    			<label><input type="checkbox" name="team" value="Republic of Ireland">Republic of Ireland</label>
    			<label><input type="checkbox" name="team" value="Northern Ireland">Northern Ireland</label><br>
    		</p>
-		<p class="p_rignt">
-			<a href="#" class="cancel" id="cancel" onclick="hide_all();">Cancel</a>
-			<a href="#" class="save" id="save" onclick="save();">Save</a>
+		<p>
+			<a href="#" class="cancel" id="cancel">Cancel</a>
+			<a href="#" class="save" id="save">Save</a>
 		</p>
 	</form>
 </div>
-<div class="profile show_all" id="profile">
+<div class="profile show-all" id="profile">
 	<h1>Information</h1>
-	<p class="name" id="name">Hi, name.</p>
-	<p id="gender_profile"></p>
-	<p id="team_reg"></p>
-	<p class="p_rignt"><a href="#" onclick="show_creativ_profile();">Edit profile</a></p>
+	<p class="name" id="name">Profile was not created.</p>
+	<p id="gender-profile"></p>
+	<p id="team-reg"></p>
+	<p id="edit-profile"><a href="#">Edit profile</a></p>
 </div>
-<div class="team_sort show_all" id="sort_team">
+<div class="team-sort show-all" id="sort-team">
 <h1>Team in Euro 2016</h1>
 	<a id='sorta'>Sort alphabetically</a><br>
 	<a id='sortz'>Sort unalphabetically</a><br>
@@ -735,7 +740,7 @@
 		<li class="li2">32</li>
 	</ul>
 </div>
-<script type="text/javascript">
+<script>
 	$(document).ready(function(){
 		$('.replace').on('click','div',function () {
   			var a = $('.replace').find('.change');

@@ -1,206 +1,235 @@
 "use strict";
 //работает
-about_team_none();
-hide_all();
+hideAll();
 team();
-document.getElementById('click_team').onclick = team;
+//Выпадающее меню клики
+document.getElementById("click-team").onclick = team;
+document.getElementById("show").onclick = showAll;
+document.getElementById("hide").onclick = hideAll;
+document.getElementById("s-img").onclick = imgShow;
+document.getElementById("h-img").onclick = imgHide;
+document.getElementById("create-pro").onclick = showCreativProfile;
+document.getElementById("profile-show").onclick = profile;
+document.getElementById("out").onclick = closeWindow;
+//Профиль клики
+document.getElementById("cancel").onclick = cancel;
+document.getElementById("save").onclick = save;
+document.getElementById("edit-profile").onclick = showCreativProfile;
+//Блоки клики показа блока
+document.getElementById("show-host").onclick = showHost;
+document.getElementById("hide-host").onclick = noneHost;
+document.getElementById("show-stadium").onclick = blockShowStadium;
+document.getElementById("hide-stadium").onclick = blockNoneStadium;
+document.getElementById("sort-block").onclick = aboutTeamShow;
+document.getElementById("sort-hide").onclick = aboutTeamNone;
+document.getElementById("show-table").onclick = showGroup;
+document.getElementById("hide-table").onclick = noneGroup;
+
+document.getElementById("show-fav").onclick = aboutTeamShow
+document.getElementById("hide-fav").onclick = aboutTeamNone;
+
+//Сортировка клики
+document.getElementById("sorta").onclick = sortA;
+document.getElementById("sortz").onclick = sortZ;
+document.getElementById("sorte").onclick = sortE;
+document.getElementById("sortq").onclick = sortQ;
 
 function team() {
-	var name_team = prompt('Hello guest! You favorite team?','Germany');
-	var mass = new Array ();
-	var mass = ['Germany','Spain','England','Belgium','Italy','Russia','Austria','Creatia',
-	'Ukraine','Sweden','Poland','Romania','Slovakia','Hungary','Turkey','Iceland','Wales',
-	'Albania','Switzerland','Czech Republic','Republic of Ireland','Northern Ireland','France'];
-	var positiveArr = mass.filter(function(string) {
-  		return string === name_team;
-	});
-	if (positiveArr == name_team) {
-  		document.getElementById('fteam').innerHTML = 'Your favorite team is ' +positiveArr+ '!';
-		document.getElementById('favteam').innerHTML = '' +positiveArr+ '!';
-		about_team_none();
-  	}
+  	var name_team = prompt("Hello guest! You favorite team?","Germany");
+  	var mass = ["Germany","Spain","England","Belgium","Italy","Russia","Austria","Creatia",
+  	"Ukraine","Sweden","Poland","Romania","Slovakia","Hungary","Turkey","Iceland","Wales",
+  	"Albania","Switzerland","Czech Republic","Republic of Ireland","Northern Ireland","France"];
+  	var positiveArr = mass.filter(function(string) {
+   		return string === name_team;
+  	});
+  	if (positiveArr == name_team) {
+   	 	document.getElementById('fteam').innerHTML = 'Your favorite team is ' +positiveArr+ '!';
+    	document.getElementById('favteam').innerHTML = '' +positiveArr+ '!';
+    	aboutTeamNone();
+	}
   	else{
 		document.getElementById('fteam').innerHTML = 'Favorite team not founded.';
 		document.getElementById('favteam').innerHTML = 'Favorite team not founded.';
-		document.getElementById('show_about_team_all').innerHTML = '<a href="#" onclick="team();">Chose team</a>';
-		document.getElementById('about_team').style.display = 'none';
+		document.getElementById('about-team').style.display = 'none';
   	}
 }
 
-function block_show_about(){
-	hide_all();
+function showHost() {
+	hideAll();
     document.getElementById('host').style.display='block';
-    document.getElementById('block_about').innerHTML = '<a href="#" onclick="block_none_about();">Hide</a>';
 }
 
-function block_none_about(){
+function noneHost() {
     document.getElementById('host').style.display='none';
-    document.getElementById('block_about').innerHTML = '<a href="#" onclick="block_show_about();">Learn more...</a>';
 }
 
-function block_show_stadium(){
-	hide_all();
-    document.getElementById('block_stadium_show').style.display='block';
-    document.getElementById('block_stadium').innerHTML = '<a href="#" onclick="block_none_stadium();">Hide</a>';
+function blockShowStadium() {
+	hideAll();
+    document.getElementById('block-stadium-show').style.display='block';
 }
 
-function block_none_stadium(){
-    document.getElementById('block_stadium_show').style.display='none';
-    document.getElementById('block_stadium').innerHTML = '<a href="#" onclick="block_show_stadium();">Learn more...</a>';
+function blockNoneStadium(){
+    document.getElementById('block-stadium-show').style.display='none';
 }
 
-function block_show_group() {
-	hide_all();
+function showGroup() {
+	hideAll();
 	var x = document.querySelectorAll('.rez');
 	for (var i = 0; i < x.length; i++) {
         x[i].style.display = 'block';
     }
-	document.getElementById('group_stage').innerHTML = '<a href="#" onclick="block_none_group();">Hide</a>';
 }
 
-function block_none_group() {
+function noneGroup() {
 	var x = document.querySelectorAll('.rez');
 	for (var i = 0; i < x.length; i++) {
         x[i].style.display = 'none';
     }
-	document.getElementById('group_stage').innerHTML = '<a href="#" onclick="block_show_group();">Learn more...</a>';
 }
 
-function about_team_show() {
-	document.getElementById('about_team').style.display = 'block';
-	document.getElementById('show_about_team_all').innerHTML = '<a href="#" onclick="about_team_none();">Hide</a>';
+function aboutTeamShow() {
+	document.getElementById('about-team').style.display = 'block';
+	
 }
 
-function about_team_none() {
-	document.getElementById('about_team').style.display = 'none';
-	document.getElementById('show_about_team_all').innerHTML = '<a href="#" onclick="about_team_show();">Learn more...</a>';
+function aboutTeamNone() {
+	document.getElementById('about-team').style.display = 'none';
 }
 
-// Показывает все блоки(почти все)
-function show_all() {
-	var x = document.querySelectorAll('.show_all');
+// Показывает все блоки
+function showAll() {
+	var x = document.querySelectorAll('.show-all');
     for (var i = 0; i < x.length; i++) {
         x[i].style.display = 'block';
     }
 }
 
 // Скрывает все блоки
-function hide_all() {
-	var x = document.querySelectorAll('.show_all');
+function hideAll() {
+	var x = document.querySelectorAll('.show-all');
     for (var i = 0; i < x.length; i++) {
         x[i].style.display = 'none';
     }
 }
 
-function show_creativ_profile() {
-	hide_all();
-	document.getElementById('creat_profile').style.display = 'block';
+function showCreativProfile() {
+	hideAll();
+	document.getElementById('creat-profile').style.display = 'block';
 }
 
-function show_team_sort() {
-	document.getElementById('sort_team').style.display = 'block';
-	document.getElementById('sort_block').innerHTML = '<a href="#" onclick="hide_team_sort();">Hide</a>';
+function showTeamSort() {
+	document.getElementById('about-team').style.display = 'block';
 }
 
-function hide_team_sort() {
-	document.getElementById('sort_team').style.display = 'none';
-	document.getElementById('sort_block').innerHTML = '<a href="#" onclick="show_team_sort();">Learn more...</a>';
+function hideTeamSort() {
+	document.getElementById('about-team').style.display = 'none';
 }
 
 function save() {
-	hide_all();
+	hideAll();
+	
 	var name_user = document.Profile.Name.value;
 	var check = document.getElementsByName('gender');
 	for (var i = 0; i < check.length; i++) {
 		if(check[i].type == "radio" && check[i].checked) {
-			document.getElementById('gender_profile').innerHTML = 'Gender: ' +check[i].value+ '';
+			document.getElementById('gender-profile').innerHTML = 'Gender: ' +check[i].value+ '';
 		}
 	}
+	
 	var checkbox = document.getElementsByName('team');
 	var checked = [];
-	for(var i = 0; i < checkbox.length; i++) {
-		if(checkbox[i].type == 'checkbox') {
-        	if(checkbox[i].checked) checked.push(checkbox[i].value);
+	for(var ii = 0; ii < checkbox.length; ii++) {
+		if(checkbox[ii].type == 'checkbox') {
+        	if(checkbox[ii].checked) checked.push(checkbox[ii].value);
     	}
 	}
 	alert('Your profile is saved.');
 	document.getElementById('name').innerHTML = 'Hi, ' +name_user+ '!';
-	document.getElementById('team_reg').innerHTML = 'Favorite team: ' +checked+ '';
+	document.getElementById('team-reg').innerHTML = 'Favorite team(s): ' +checked+ '';
 }
 
-function profile_name() {
+function cancel() {
+	hideAll();
+	alert('Not saved');
+}
+
+function profile() {
 	document.getElementById('profile').style.display = 'block';
 }
 
 // Sorty
-sorta.onclick = function sorta() {
+function sortA() {
 	var myar = new Array();
 	var li1 = document.querySelectorAll('.li1');
-	for(var li2=0;li2<li1.length;li2++) {
-		myar[li2]=li1[li2].innerHTML;
+	for(var li2 = 0; li2 < li1.length; li2++) {
+		myar[li2] = li1[li2].innerHTML;
 	}
 	myar.sort();
-	for(var li3=0;li3<myar.length;li3++) {
-		li1[li3].innerHTML=myar[li3];
+	for(var li3 = 0; li3 < myar.length; li3++) {
+		li1[li3].innerHTML = myar[li3];
 	}
 }
 
-sortz.onclick = function sortz() {
+function sortZ() {
 	var myar = new Array();
 	var li1 = document.querySelectorAll('.li1');
-	for(var li2=0;li2<li1.length;li2++) {
-		myar[li2]=li1[li2].innerHTML;
+	for(var li2 = 0; li2 < li1.length; li2++) {
+		myar[li2] = li1[li2].innerHTML;
 	}
 	myar.sort();
 	myar.reverse();
-	for(var li3=0;li3<myar.length;li3++) {
-		li1[li3].innerHTML=myar[li3];
+	for(var li3 = 0; li3 < myar.length;li3++) {
+		li1[li3].innerHTML = myar[li3];
 	}
 }
 // Скрывание картинок
-h_img.onclick = function img_hide() {
+function imgHide() {
 	var x = document.querySelectorAll('.image');
     for (var i = 0; i < x.length; i++) {
         x[i].style.display = 'none';
     }
 }
- 
-s_img.onclick = function img_show() {
+
+function imgShow() {
 	var x = document.querySelectorAll('.image');
     for (var i = 0; i < x.length; i++) {
         x[i].style.display = 'block';
     }
 }
 
-sorte.onclick = function sorte() {
+function sortE() {
 	var newarr = new Array();
 	var sp1 = document.querySelectorAll('.li2')
-	for(var sp2=0;sp2<sp1.length;sp2++) {
-		newarr[sp2]=sp1[sp2].innerHTML;
+	for(var sp2 = 0; sp2 < sp1.length; sp2++) {
+		newarr[sp2] = sp1[sp2].innerHTML;
 	}
 	newarr.sort(function(a,b){return a-b;});
-	for(var sp3=0;sp3<newarr.length;sp3++) {
-		sp1[sp3].innerHTML=newarr[sp3];
+	for(var sp3 = 0; sp3 < newarr.length; sp3++) {
+		sp1[sp3].innerHTML = newarr[sp3];
 	}
 }
 
-sortq.onclick = function sortq() {
+function sortQ() {
 	var newarr = new Array();
 	var sp1 = document.querySelectorAll('.li2')
-	for(var sp2=0;sp2<sp1.length;sp2++) {
-		newarr[sp2]=sp1[sp2].innerHTML;
+	for(var sp2 = 0; sp2 < sp1.length;sp2++) {
+		newarr[sp2] = sp1[sp2].innerHTML;
 	}
 	newarr.sort(function(a,b){return a-b;});
 	newarr.reverse();
-	for(var sp3=0;sp3<newarr.length;sp3++) {
-		sp1[sp3].innerHTML=newarr[sp3];
+	for(var sp3 = 0; sp3 < newarr.length; sp3++) {
+		sp1[sp3].innerHTML = newarr[sp3];
 	}
 }
 
 //мелочь
-close_window.onclick = function close_window() {
+function closeWindow() {
 	alert('YOU WILL NOT LEAVE! HAHAHAHHA');
 }
 //задачки
 // отказ от onclick();
 // перевод в модули
+
+//проблемы 
+//не ищет ид после изминение позиций блока
+//onclick удаления не могу пока подключить через js файл
