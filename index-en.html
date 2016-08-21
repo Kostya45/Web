@@ -31,14 +31,13 @@
     	<script>
        	 $(function(){
              $('.slide-out-div').tabSlideOut({
-                 tabHandle: '.handle',                              //класс элемента
                  pathToTabImage: 'style/setting.png',          		//путь к изображению *required*
                  imageHeight: '40px',                               //высота  *required*
                  imageWidth: '40px',                               //width of tab image *required*    
                  tabLocation: 'left',                               //side of screen where tab lives, top, right, bottom, or left
                  speed: 1000,                                        //speed of animation
                  action: 'click',                                   //options: 'click' or 'hover', action to trigger animation
-                 topPos: '200px',                                   //position from the top
+                 topPos: '20%',                                   //position from the top
                  fixedPosition: true                              //options: true makes it stick(fixed position) on scroll
              });
          });
@@ -689,8 +688,8 @@
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<h1>Team in Euro 2016</h1>
-	<a id='sorta'>Sort alphabetically</a><br>
-	<a id='sortz'>Sort unalphabetically</a><br>
+	<a href="#al" id='sorta'>Sort alphabetically</a><br>
+	<a href="#rev" id='sortz'>Sort unalphabetically</a><br>
 	<ul id="list_id">
 		<li class="li1">France</li>
 		<li class="li1">Germany</li>
@@ -717,8 +716,8 @@
 		<li class="li1">Republic of Ireland</li>
 		<li class="li1">Northern Ireland</li>
 	</ul>
-	<a id='sorte'>Sort alphabetically</a><br>
-	<a id='sortq'>Sort unalphabetically</a><br>
+	<a href="#al" id='sorte'>Sort alphabetically</a><br>
+	<a href="#rev" id='sortq'>Sort unalphabetically</a><br>
 	<ul id="list">
 		<li class="li2">23</li>
 		<li class="li2">5464</li>

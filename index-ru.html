@@ -29,14 +29,13 @@
     	<script>
          $(function(){
              $('.slide-out-div').tabSlideOut({
-                 tabHandle: '.handle',                              //класс элемента
                  pathToTabImage: 'style/setting.png',          		//путь к изображению *required*
                  imageHeight: '40px',                               //высота  *required*
                  imageWidth: '40px',                               //width of tab image *required*    
                  tabLocation: 'left',                               //side of screen where tab lives, top, right, bottom, or left
                  speed: 1000,                                        //speed of animation
                  action: 'click',                                   //options: 'click' or 'hover', action to trigger animation
-                 topPos: '200px',                                   //position from the top
+                 topPos: '20%',                                   //position from the top
                  fixedPosition: true                              //options: true makes it stick(fixed position) on scroll
              });
          });
@@ -85,7 +84,7 @@
     <div class="slide-out-div">
         <a class="handle" href="http://link-for-non-js-users">Содержание</a>
         <h3>Профиль</h3>
-        <p id="name">not created
+        <p id="name">не создано
         <p id="gender-profile">
         <p id="team-reg">
     </div>
@@ -107,7 +106,7 @@
 	<br>Мировой культуры, спорта, науки и политики все это может обнаружить различные французские водяные знаки. Шарль де Голль распространять республиканские идеалы, в то время как послание вольнодумство и романтики поэтично распространены подобными Виктора Гюго, Жан-Жака Руссо, Вольтера и Жан-Поль Сартр. Художники (Поль Сезанн, Клод Моне), композиторы (Гектор Берлиоз, Морис Равель), архитекторы (Лево, Ле Корбюзье) - почти каждая прядь культуры имеет французский акцент. Точно так же большие в мире спортивных событий, Олимпиада, Чемпионат мира по футболу, Чемпионат Европы УЕФА и Лиги чемпионов УЕФА, ведут свое происхождение обратно во Францию.
 	<p>
 	<br><b>Еда</b>
-	<br>Где вы начать? С Bon Appetit, возможно, что основным продуктом фраза не заинтересованных в настоящее время ограничивается синими обматывает на старых картах , которые когда - то означали империю Франции. Для своей цели она не может быть улучшено, а в желудках многих, и не может французской гастрономии. При таком огромном диапазоне климатических условий и ландшафта, кладовая хорошо укомплектованным; и от Жана Anthelme Брилья-Savarin к Поль Бокюз, он извлек выгоду из писателей, художников и поваров с сенсорным алхимика. Фуа - гра, Cassoulet, квашеной капусты, буйабес, андуйет - в каждой местности есть свои фирменные блюда, свои собственные интерпретации.
+	<br>Где бы начать? С Bon Appetit, возможно, что основным продуктом фраза не заинтересованных в настоящее время ограничивается синими обматывает на старых картах , которые когда - то означали империю Франции. Для своей цели она не может быть улучшено, а в желудках многих, и не может французской гастрономии. При таком огромном диапазоне климатических условий и ландшафта, кладовая хорошо укомплектованным; и от Жана Anthelme Брилья-Savarin к Поль Бокюз, он извлек выгоду из писателей, художников и поваров с сенсорным алхимика. Фуа - гра, Cassoulet, квашеной капусты, буйабес, андуйет - в каждой местности есть свои фирменные блюда, свои собственные интерпретации.
 	<p>
 	<br><b>Спорт</b>
 	<br>Футбол является самым популярным видом спорта во Франции, с около двух миллионов лицензированных игроков. Тем не менее, страна имеет богатую традицию в командный вид спорта в целом - Les Bleus были бегунами на чемпионате мира по регби 2011 IRB и царят мужские олимпийские чемпионы по гандболу. Франция также имеет плодовитый производственную линию баскетболистов, велосипедистов и водителей автоспорта, а в теннис в Открытом чемпионате Франции является одним из четырех турниров Большого шлема. Самое большое ежегодное спортивное событие является езда на велосипеде Тур де Франс, который привлекает в районе 12 миллионов зрителей.
@@ -494,7 +493,7 @@
 		</tr>
 		<tr class="yellow">
 			<td class="center-style-image"><img class="table-image-country" src="style/image/country/groupC/nir.png" alt="nir"></td>
-			<td>Ирландия</td>
+			<td>C.Ирландия</td>
 			<td>3</td>
 			<td>1</td>
 			<td>0</td>
@@ -513,6 +512,8 @@
 	</table>
 </div>
 <div class="block-group4 show-all rez" id="block-group4">
+	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
+	<img src="style/image/others/close.png" alt="close"></a>
 	<h4>Группа D</h4>
 	<table>
         <tr class="center-style">
@@ -563,6 +564,8 @@
 	</table>
 </div>
 <div class="block-group5 show-all rez" id="block-group5">
+	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
+	<img src="style/image/others/close.png" alt="close"></a>
 	<h4>Группа E</h4>
 	<table>
 		<tr class="center-style">
@@ -613,6 +616,8 @@
 	</table>
 </div>
 <div class="block-group6 show-all rez" id="block-group6">
+	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
+	<img src="style/image/others/close.png" alt="close"></a>
 	<h4>Группа F</h4>
 	<table>
 		<tr class="center-style">
@@ -666,8 +671,8 @@
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<h1>Команды на Евро 2016</h1>
-	<a id='sorta'>Сортировать по алфавиту</a><br>
-	<a id='sortz'>Сортировать вразброс</a><br>
+	<a href="#al" id='sorta'>Сортировать по алфавиту</a><br>
+	<a href="#rev" id='sortz'>Сортировать реверсом</a><br>
 	<ul id="list_id">
 		<li class="li1">Франция</li>
 		<li class="li1">Германия</li>
@@ -694,8 +699,8 @@
 		<li class="li1">Ирландия</li>
 		<li class="li1">Северная Ирландия</li>
 	</ul>
-	<a id='sorte'>Сортировать по алфавиту</a><br>
-	<a id='sortq'>Сортировать вразброс</a><br>
+	<a href="#al" id='sorte'>Сортировать по алфавиту</a><br>
+	<a href="#rev" id='sortq'>Сортировать реверсомс</a><br>
 	<ul id="list">
 		<li class="li2">23</li>
 		<li class="li2">5464</li>

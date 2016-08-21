@@ -1,31 +1,48 @@
 "use strict";
 
-document.getElementById("create-pro").onclick = showCreativProfile;
-//profile
-document.getElementById("cancel").onclick = cancel;
-document.getElementById("save").onclick = save;
-//fom
-document.getElementById("stan").onclick = standart;
-document.getElementById("red").onclick = red;
-document.getElementById("euro").onclick = euro;
-
-// View
+// списки клики
 document.getElementById("host").onclick = host_view;
 document.getElementById("stadium").onclick = stadium_view;
 document.getElementById("group").onclick = group_view;
 document.getElementById("country").onclick = country_view;
+
+document.getElementById("create-pro").onclick = showCreativProfile;
 document.getElementById('info').onclick = info;
 
+function host_view() {
+	document.getElementById("hostv").style.display = "block";
+}
 
-//Сортировка клики
-document.getElementById("sorta").onclick = sortA;
-document.getElementById("sortz").onclick = sortZ;
-document.getElementById("sorte").onclick = sortE;
-document.getElementById("sortq").onclick = sortQ;
+function stadium_view() {
+	document.getElementById("block-stadium-show").style.display = "block";
+}
+
+function group_view() {
+	var x = document.querySelectorAll('.rez');
+	for (var i = 0; i < x.length; i++) {
+        x[i].style.display = 'block';
+	}
+}
+
+function country_view() {
+	document.getElementById("countryv").style.display = "block";
+}
 
 function showCreativProfile() {
 	document.getElementById('creat-profile').style.display = 'block';
 }
+
+function info() {
+	var date = Date();
+	var info = navigator.userAgent;
+	var all = date + '\n' + info;
+	alert(all);
+}
+// конец
+
+// кнопки сохранения/отмены в блоке профиль
+document.getElementById("cancel").onclick = cancel;
+document.getElementById("save").onclick = save;
 
 function save() {
 	var name_user = document.Profile.Name.value;
@@ -53,6 +70,12 @@ function cancel() {
 	document.getElementById('creat-profile').style.display = 'none';
 	alert('Not saved');
 }
+// конец
+
+// фоны на страницы
+document.getElementById("stan").onclick = standart;
+document.getElementById("red").onclick = red;
+document.getElementById("euro").onclick = euro;
 
 function standart() {
 	document.body.style.backgroundImage = "url('style/back/back.jpg')";
@@ -65,29 +88,13 @@ function red() {
 function euro() {
 	document.body.style.backgroundImage = 'url("style/back/euroh.jpg")';
 }
+// конец
 
-function host_view() {
-	document.getElementById("hostv").style.display = "block";
-}
-
-function stadium_view() {
-	document.getElementById("block-stadium-show").style.display = "block";
-}
-
-function group_view() {
-	var x = document.querySelectorAll('.rez');
-	for (var i = 0; i < x.length; i++) {
-        x[i].style.display = 'block';
-	}
-}
-
-function info() {
-	alert(Date());
-}
-
-function country_view() {
-	document.getElementById("countryv").style.display = "block";
-}
+// Клики сортировки
+document.getElementById("sorta").onclick = sortA;
+document.getElementById("sortz").onclick = sortZ;
+document.getElementById("sorte").onclick = sortE;
+document.getElementById("sortq").onclick = sortQ;
 
 function sortA() {
 	var myar = new Array();
@@ -100,7 +107,7 @@ function sortA() {
 		li1[li3].innerHTML = myar[li3];
 	}
 }
-//Сортировка инверсия алфавиту
+// Сортировка инверсия алфавиту
 function sortZ() {
 	var myar = new Array();
 	var li1 = document.querySelectorAll('.li1');
@@ -113,7 +120,7 @@ function sortZ() {
 		li1[li3].innerHTML = myar[li3];
 	}
 }
-
+// Сортировка чисел
 function sortE() {
 	var newarr = new Array();
 	var sp1 = document.querySelectorAll('.li2')
@@ -126,6 +133,7 @@ function sortE() {
 	}
 }
 
+// Сортировка инверсия 
 function sortQ() {
 	var newarr = new Array();
 	var sp1 = document.querySelectorAll('.li2')
@@ -138,3 +146,5 @@ function sortQ() {
 		sp1[sp3].innerHTML = newarr[sp3];
 	}
 }
+
+// конец
