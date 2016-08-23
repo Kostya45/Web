@@ -9,7 +9,6 @@
 	<script src="js/jquery.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
- 
 		$(window).scroll(function(){
 		if ($(this).scrollTop() > 100) {
 			$('.scrollup').fadeIn();
@@ -31,7 +30,7 @@
     	<script>
        	 $(function(){
              $('.slide-out-div').tabSlideOut({
-                 pathToTabImage: 'style/setting.png',          		//путь к изображению *required*
+                 pathToTabImage: 'style/image/others/setting.png',          		//путь к изображению *required*
                  imageHeight: '40px',                               //высота  *required*
                  imageWidth: '40px',                               //width of tab image *required*    
                  tabLocation: 'left',                               //side of screen where tab lives, top, right, bottom, or left
@@ -90,7 +89,7 @@
         <p id="gender-profile">
         <p id="team-reg">
     </div>
-<div class="host" id="hostv">
+<div class="host show" id="hostv">
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<div class="image">
@@ -120,7 +119,7 @@
 	<br>Elite French football remained amateur until 1932/33, but their clubs were up to speed by the advent of European football and Stade de Reims were runners-up to Real Madrid CF in the inaugural European Champion Clubs' Cup final. It was not until 1993 that a French side ruled Europe as Olympique de Marseille, traditional domestic powerhouses with AS Saint-Étienne, beat AC Milan. Olympique Lyonnais lifted seven successive titles at the start of the century, but more recently Ligue 1 has been noted for its competitiveness, with five different champions in as many seasons.
 	</div>
 </div>
-<div class="block-stadium" id="block-stadium-show">
+<div class="block-stadium show" id="block-stadium-show">
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<h1>Stadiums</h1>
@@ -327,52 +326,7 @@
 		<p>In addition to football, the ground regularly holds rugby matches, and was a venue for the 2007 Rugby World Cup.
 	</p>
 </div>
-<div class="create-profile show-all" id="creat-profile">
-	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
-	<img src="style/image/others/close.png" alt="close"></a>
-	<h2>Create/Edit profile</h2>
-	<form name="Profile">
-		<p><b>Your name</b><br>
-   			<input type="text" name="Name" size="15" placeholder="Here">
-   		</p>
-   		<p><b>Gender</b><br>
-   			<label><input type="radio" name="gender" value="Male">Male</label><br>
-   			<label><input type="radio" name="gender" value="FeMale">FeMale</label><br>
-  		</p>
-  		<p><b>Your favorite teams</b></p>
-   		<p>
-   			<label><input type="checkbox" name="team" value="France">France</label>
-   			<label><input type="checkbox" name="team" value="Germany">Germany</label>
-   			<label><input type="checkbox" name="team" value="Spain">Spain</label>
-   			<label><input type="checkbox" name="team" value="England">England</label><br>
-   			<label><input type="checkbox" name="team" value="Portugal">Portugal</label>
-   			<label><input type="checkbox" name="team" value="Belgium">Belgium</label>
-   			<label><input type="checkbox" name="team" value="Italy">Italy</label>
-   			<label><input type="checkbox" name="team" value="Russia">Russia</label><br>
-   			<label><input type="checkbox" name="team" value="Austria">Austria</label>
-   			<label><input type="checkbox" name="team" value="Creatia">Creatia</label>
-   			<label><input type="checkbox" name="team" value="Ukraine">Ukraine</label>
-   			<label><input type="checkbox" name="team" value="Sweden">Sweden</label><br>
-   			<label><input type="checkbox" name="team" value="Poland">Poland</label>
-   			<label><input type="checkbox" name="team" value="Romania">Romania</label>
-   			<label><input type="checkbox" name="team" value="Slovakia">Slovakia</label>
-   			<label><input type="checkbox" name="team" value="Hungary">Hungary</label><br>
-   			<label><input type="checkbox" name="team" value="Turkey">Turkey</label>
-   			<label><input type="checkbox" name="team" value="Iceland">Iceland</label>
-   			<label><input type="checkbox" name="team" value="Wales">Wales</label>
-   			<label><input type="checkbox" name="team" value="Albania">Albania</label><br>
-   			<label><input type="checkbox" name="team" value="Switzerland">Switzerland</label>
-   			<label><input type="checkbox" name="team" value="Czech Republic">Czech Republic</label>
-   			<label><input type="checkbox" name="team" value="Republic of Ireland">Republic of Ireland</label>
-   			<label><input type="checkbox" name="team" value="Northern Ireland">Northern Ireland</label><br>
-   		</p>
-		<p>
-			<a href="#" class="cancel" id="cancel">Cancel</a>
-			<a href="#" class="save" id="save">Save</a>
-		</p>
-	</form>
-</div>
-<div class="block-group1 show-all rez" id="block-group1">
+<div class="block-group1 show rez" id="block-group1">
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<h4>Group A</h4>
@@ -424,7 +378,7 @@
 		</tr>
 	</table>
 </div>
-<div class="block-group2 show-all rez" id="block-group2">
+<div class="block-group2 show rez" id="block-group2">
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<h4>Group B</h4>
@@ -476,7 +430,7 @@
 		</tr>
 	</table>
 </div>
-<div class="block-group3 show-all rez" id="block-group3">
+<div class="block-group3 show rez" id="block-group3">
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<h4>Group C</h4>
@@ -528,7 +482,7 @@
 		</tr>
 	</table>
 </div>
-<div class="block-group4 show-all rez" id="block-group4">
+<div class="block-group4 show rez" id="block-group4">
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<h4>Group D</h4>
@@ -580,7 +534,7 @@
 		</tr>
 	</table>
 </div>
-<div class="block-group5 show-all rez" id="block-group5">	
+<div class="block-group5 show rez" id="block-group5">	
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<h4>Group E</h4>
@@ -632,7 +586,7 @@
 		</tr>
 	</table>
 </div>
-<div class="block-group6 show-all rez" id="block-group6">
+<div class="block-group6 show rez" id="block-group6">
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<h4>Group F</h4>
@@ -684,7 +638,59 @@
 		</tr>
 	</table>
 </div>
-<div class="country" id="countryv">
+<div class="create-profile show" id="creat-profile">
+	<h2>Create/Edit profile</h2>
+	<form name="Profile">
+		<fieldset>
+		<legend>Your name</legend>
+		<p>
+   			<input type="text" name="Name" size="15" placeholder="Here">
+   		</p>
+   		</fieldset>
+   		<fieldset>
+   		<legend>Gender</legend>
+   		<p>
+   			<label><input type="radio" name="gender" value="Male">Male</label><br>
+   			<label><input type="radio" name="gender" value="FeMale">FeMale</label><br>
+  		</p>
+  		</fieldset>
+  		<fieldset>
+  		<legend>Your favorite teams</legend>
+  		<p>
+   		<p>
+   			<label><input type="checkbox" name="team" value="France">France</label>
+   			<label><input type="checkbox" name="team" value="Germany">Germany</label>
+   			<label><input type="checkbox" name="team" value="Spain">Spain</label>
+   			<label><input type="checkbox" name="team" value="England">England</label><br>
+   			<label><input type="checkbox" name="team" value="Portugal">Portugal</label>
+   			<label><input type="checkbox" name="team" value="Belgium">Belgium</label>
+   			<label><input type="checkbox" name="team" value="Italy">Italy</label>
+   			<label><input type="checkbox" name="team" value="Russia">Russia</label><br>
+   			<label><input type="checkbox" name="team" value="Austria">Austria</label>
+   			<label><input type="checkbox" name="team" value="Creatia">Creatia</label>
+   			<label><input type="checkbox" name="team" value="Ukraine">Ukraine</label>
+   			<label><input type="checkbox" name="team" value="Sweden">Sweden</label><br>
+   			<label><input type="checkbox" name="team" value="Poland">Poland</label>
+   			<label><input type="checkbox" name="team" value="Romania">Romania</label>
+   			<label><input type="checkbox" name="team" value="Slovakia">Slovakia</label>
+   			<label><input type="checkbox" name="team" value="Hungary">Hungary</label><br>
+   			<label><input type="checkbox" name="team" value="Turkey">Turkey</label>
+   			<label><input type="checkbox" name="team" value="Iceland">Iceland</label>
+   			<label><input type="checkbox" name="team" value="Wales">Wales</label>
+   			<label><input type="checkbox" name="team" value="Albania">Albania</label><br>
+   			<label><input type="checkbox" name="team" value="Switzerland">Switzerland</label>
+   			<label><input type="checkbox" name="team" value="Czech Republic">Czech Republic</label>
+   			<label><input type="checkbox" name="team" value="Republic of Ireland">Republic of Ireland</label>
+   			<label><input type="checkbox" name="team" value="Northern Ireland">Northern Ireland</label><br>
+   		</p>
+   		</fieldset>
+		<p>
+			<a href="#" class="cancel" id="cancel">Cancel</a>
+			<a href="#" class="save" id="save">Save</a>
+		</p>
+	</form>
+</div>
+<div class="country show" id="countryv">
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<h1>Team in Euro 2016</h1>
@@ -727,13 +733,23 @@
 		<li class="li2">32</li>
 	</ul>
 </div>
+<div class="del show" id="del">
+	<h1>Block deleted :(</h1>
+	<h2>Choose another location or restart page.</h2>
+</div>
 <div id="footer">
-	<a href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
-	<img class="close" src="style/image/others/close.png" alt="close"></a>
+	<a href="#">
+	<img class="close" id="close" src="style/image/others/close.png" alt="close"></a>
 	<p>Test project "Euro 2016 in France" for RiverSoft&copy;</p>
 </div>
 <div>
-<a href="#" class="scrollup">On top</a>
+	<a href="#" class="scrollup">On top</a>
 </div>
+
+<script type="text/javascript">
+	$('#close').click(function(){
+  		$("div#footer").remove();
+	});
+</script>
 </body>
 </html>

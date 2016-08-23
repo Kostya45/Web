@@ -228,6 +228,7 @@ table {
     height: auto;
     border: 10px solid white;
     border-radius: 20px;
+    
 }
 /*конец*/
 
@@ -253,7 +254,7 @@ h4 {
 
 /*выпадающее меню и профиль и настройка ul и li*/
 .right-ul {
-	margin-right: 80%;
+	margin-right: 75%;
 }
 
 .right-li {
@@ -388,26 +389,6 @@ a:hover {
 /*конец*/
 
 /*Кнопка сохранить/отмена*/
-a.save {
-	font-weight: 700;
-	color: white;
-	text-decoration: none;
-	padding: .8em 1em calc(.8em + 3px);
-	border-radius: 3px;
-	background: rgb(64,199,129);
-	box-shadow: 0 -3px rgb(53,167,110) inset;
-	transition: 0.2s;
-} 
-
-a.save:hover { 
-	background: rgb(53, 167, 110); 
-}
-
-a.save:active {
-	background: rgb(33,147,90);
-	box-shadow: 0 3px rgb(33,147,90) inset;
-}
-
 a.cancel {
 	font-weight: 700;
 	color: white;
@@ -417,6 +398,7 @@ a.cancel {
 	background: rgb(248,93,89);
 	box-shadow: 0 -3px rgb(244,52,47) inset;
 	transition: 0.2s;
+	float: right;
 } 
 
 a.cancel:hover { 
@@ -426,6 +408,27 @@ a.cancel:hover {
 a.cancel:active {
 	background: rgb(201,18,13);
 	box-shadow: 0 3px rgb(201,18,13) inset;
+}
+
+a.save {
+	font-weight: 700;
+	color: white;
+	text-decoration: none;
+	padding: .8em 1em calc(.8em + 3px);
+	border-radius: 3px;
+	background: rgb(64,199,129);
+	box-shadow: 0 -3px rgb(53,167,110) inset;
+	transition: 0.2s;
+	float: right;
+} 
+
+a.save:hover { 
+	background: rgb(53, 167, 110); 
+}
+
+a.save:active {
+	background: rgb(33,147,90);
+	box-shadow: 0 3px rgb(33,147,90) inset;
 }
 /*конец*/
 
@@ -445,4 +448,16 @@ a.cancel:active {
 a.scrollup:hover{
 	opacity: 1;
 }
-/*конец
+/*конец*/
+
+/*если блок удалён*/
+.del {
+	margin: 5% 10% 0% 10%;
+	border-style: solid;
+	border-color: #317bb9;
+	padding: 20px;
+	border-radius: 10px;
+	background-color: white;
+	display: none;
+}
+/*конец*/

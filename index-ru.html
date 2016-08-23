@@ -29,7 +29,7 @@
     	<script>
          $(function(){
              $('.slide-out-div').tabSlideOut({
-                 pathToTabImage: 'style/setting.png',          		//путь к изображению *required*
+                 pathToTabImage: 'style/image/others/setting.png',          		//путь к изображению *required*
                  imageHeight: '40px',                               //высота  *required*
                  imageWidth: '40px',                               //width of tab image *required*    
                  tabLocation: 'left',                               //side of screen where tab lives, top, right, bottom, or left
@@ -88,7 +88,7 @@
         <p id="gender-profile">
         <p id="team-reg">
     </div>
-<div class="host" id="hostv">
+<div class="host show" id="hostv">
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<div class="image">
@@ -118,7 +118,7 @@
 	<br>Elite французского футбола остался любителем до 1932/33, но их клубы были до скорости с появлением европейского футбола и Стад де Реймс были бегунами до Реала в первом финале Кубка европейских чемпионов. Он не был до 1993 года , что французская сторона управляла Европу как Олимпика, традиционные домашние электростанции с Сент-Этьен, обыграл Милан. Olympique Lyonnais поднял семь последовательных титулов в начале века, но в последнее время Ligue 1 было отмечено , для ее конкурентоспособности, с пятью различными чемпионами , как много сезонов.
 	</div>
 </div>
-<div class="block-stadium" id="block-stadium-show">
+<div class="block-stadium  show" id="block-stadium-show">
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<h1>Стадионы</h1>
@@ -310,52 +310,7 @@
 		<p>Самая большая площадка в регионе Юг-Пиренеи, стадион претерпел значительные ремонтные работы в 1949 и 1997 годах, последняя работа идет впереди чемпионата мира 1998 года, когда оно приняло шесть матчей. После продолжительных усилий по ремонту после того, как соседний химический завод произошел крупный взрыв в 2001 году, дальнейшая модернизация работа прошла впереди ЕВРО-2016.</p>
 		<p>Арена стала свидетелем многих прекрасных моментов Тулузы, в том числе Кубка УЕФА в первом раунде победу над Наполи в октябре 1986 года, когда Диего Марадона уволен с поста во время серии пенальти.</p>
 </div>
-<div class="create-profile show-all" id="creat-profile">
-	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
-	<img src="style/image/others/close.png" alt="close"></a>
-	<h2>Создать/Изменить профиль</h2>
-	<form name="Profile">
-		<p><b>Ваше имя</b><br>
-   			<input type="text" name="Name" size="15" placeholder="Here">
-   		</p>
-   		<p><b>Пол</b><br>
-   			<label><input type="radio" name="gender" value="Male">Мужчина</label><br>
-   			<label><input type="radio" name="gender" value="FeMale">Женщина</label><br>
-  		</p>
-  		<p><b>Ваша любимая команда</b></p>
-   		<p>
-   			<label><input type="checkbox" name="team" value="France">Франция</label>
-   			<label><input type="checkbox" name="team" value="Germany">Германия</label>
-   			<label><input type="checkbox" name="team" value="Spain">Испания</label>
-   			<label><input type="checkbox" name="team" value="England">Англия</label><br>
-   			<label><input type="checkbox" name="team" value="Portugal">Португалия</label>
-   			<label><input type="checkbox" name="team" value="Belgium">Бельгия</label>
-   			<label><input type="checkbox" name="team" value="Italy">Италия</label>
-   			<label><input type="checkbox" name="team" value="Russia">Россия</label><br>
-   			<label><input type="checkbox" name="team" value="Austria">Австрия</label>
-   			<label><input type="checkbox" name="team" value="Creatia">Хорватия</label>
-   			<label><input type="checkbox" name="team" value="Ukraine">Украина</label>
-   			<label><input type="checkbox" name="team" value="Sweden">Швеция</label><br>
-   			<label><input type="checkbox" name="team" value="Poland">Польша</label>
-   			<label><input type="checkbox" name="team" value="Romania">Румыния</label>
-   			<label><input type="checkbox" name="team" value="Slovakia">Словакия</label>
-   			<label><input type="checkbox" name="team" value="Hungary">Венгрия</label><br>
-   			<label><input type="checkbox" name="team" value="Turkey">Турция</label>
-   			<label><input type="checkbox" name="team" value="Iceland">Исландия</label>
-   			<label><input type="checkbox" name="team" value="Wales">Уэльс</label>
-   			<label><input type="checkbox" name="team" value="Albania">Албания</label><br>
-   			<label><input type="checkbox" name="team" value="Switzerland">Швейцария</label>
-   			<label><input type="checkbox" name="team" value="Czech Republic">Чехия</label>
-   			<label><input type="checkbox" name="team" value="Republic of Ireland">Ирландия</label>
-   			<label><input type="checkbox" name="team" value="Northern Ireland">Северная Ирландия</label><br>
-   		</p>
-		<p>
-			<a href="#" class="cancel" id="cancel">Закрыть</a>
-			<a href="#" class="save" id="save">Сохранить</a>
-		</p>
-	</form>
-</div>
-<div class="block-group1 show-all rez" id="block-group1">
+<div class="block-group1 show rez" id="block-group1">
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<h4>Группа А</h4>
@@ -407,7 +362,7 @@
 		</tr>
 	</table>
 </div>
-<div class="block-group2 show-all rez" id="block-group2">
+<div class="block-group2 show rez" id="block-group2">
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<h4>Группа В</h4>
@@ -459,7 +414,7 @@
 		</tr>
 	</table>
 </div>
-<div class="block-group3 show-all rez" id="block-group3">
+<div class="block-group3 show rez" id="block-group3">
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<h4>Группа С</h4>
@@ -511,7 +466,7 @@
 		</tr>
 	</table>
 </div>
-<div class="block-group4 show-all rez" id="block-group4">
+<div class="block-group4 show rez" id="block-group4">
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<h4>Группа D</h4>
@@ -563,7 +518,7 @@
 		</tr>
 	</table>
 </div>
-<div class="block-group5 show-all rez" id="block-group5">
+<div class="block-group5 show rez" id="block-group5">
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<h4>Группа E</h4>
@@ -615,7 +570,7 @@
 		</tr>
 	</table>
 </div>
-<div class="block-group6 show-all rez" id="block-group6">
+<div class="block-group6 show rez" id="block-group6">
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<h4>Группа F</h4>
@@ -667,7 +622,57 @@
 		</tr>
 	</table>
 </div>
-<div class="country" id="countryv">
+<div class="create-profile show" id="creat-profile">
+	<h2>Создать/Изменить профиль</h2>
+	<form name="Profile">
+		<fieldset>
+		<legend>Ваше имя</legend>
+		<p>
+   			<input type="text" name="Name" size="15" placeholder="Here">
+   		</p>
+   		</fieldset>
+   		<fieldset>
+   		<legend>Ваш пол</legend>
+   		<p>	
+   			<label><input type="radio" name="gender" value="Male">Мужчина</label><br>
+   			<label><input type="radio" name="gender" value="FeMale">Женщина</label><br>
+  		</p>
+  		</fieldset>
+  		<fieldset>
+  		<legend>Ваша любимая(ые) команда(ы)</legend>
+   		<p>
+   			<label><input type="checkbox" name="team" value="France">Франция</label>
+   			<label><input type="checkbox" name="team" value="Germany">Германия</label>
+   			<label><input type="checkbox" name="team" value="Spain">Испания</label>
+   			<label><input type="checkbox" name="team" value="England">Англия</label><br>
+   			<label><input type="checkbox" name="team" value="Portugal">Португалия</label>
+   			<label><input type="checkbox" name="team" value="Belgium">Бельгия</label>
+   			<label><input type="checkbox" name="team" value="Italy">Италия</label>
+   			<label><input type="checkbox" name="team" value="Russia">Россия</label><br>
+   			<label><input type="checkbox" name="team" value="Austria">Австрия</label>
+   			<label><input type="checkbox" name="team" value="Creatia">Хорватия</label>
+   			<label><input type="checkbox" name="team" value="Ukraine">Украина</label>
+   			<label><input type="checkbox" name="team" value="Sweden">Швеция</label><br>
+   			<label><input type="checkbox" name="team" value="Poland">Польша</label>
+   			<label><input type="checkbox" name="team" value="Romania">Румыния</label>
+   			<label><input type="checkbox" name="team" value="Slovakia">Словакия</label>
+   			<label><input type="checkbox" name="team" value="Hungary">Венгрия</label><br>
+   			<label><input type="checkbox" name="team" value="Turkey">Турция</label>
+   			<label><input type="checkbox" name="team" value="Iceland">Исландия</label>
+   			<label><input type="checkbox" name="team" value="Wales">Уэльс</label>
+   			<label><input type="checkbox" name="team" value="Albania">Албания</label><br>
+   			<label><input type="checkbox" name="team" value="Switzerland">Швейцария</label>
+   			<label><input type="checkbox" name="team" value="Czech Republic">Чехия</label>
+   			<label><input type="checkbox" name="team" value="Republic of Ireland">Ирландия</label>
+   			<label><input type="checkbox" name="team" value="Northern Ireland">Северная Ирландия</label><br>
+   		</p>
+		<p>
+		</fieldset>
+			<a href="#" class="cancel" id="cancel">Закрыть</a>
+			<a href="#" class="save" id="save">Сохранить</a>
+	</form>
+</div>
+<div class="country show" id="countryv">
 	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
 	<img src="style/image/others/close.png" alt="close"></a>
 	<h1>Команды на Евро 2016</h1>
@@ -710,13 +715,22 @@
 		<li class="li2">32</li>
 	</ul>
 </div>
+<div class="del show" id="del">
+	<h1>Блок удалён :(</h1>
+	<h2>Выберите другой пункт или перезапустите страницу.</h2>
+</div>
 <div id="footer">
-	<a href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
-	<img class="close" src="style/image/others/close.png" alt="close"></a>
+	<a href="#1">
+	<img class="close" id="close" src="style/image/others/close.png" alt="close"></a>
 	<p>Тестовый проект "Евро 2016 во Франции" для RiverSoft&copy;</p>
 </div>
 <div>
-<a href="#" class="scrollup">On top</a>
+	<a href="#" class="scrollup">На верх</a>
 </div>
+<script type="text/javascript">
+	$('#close').click(function(){
+  		$("div#footer").remove();
+	});
+</script>
 </body>
 </html>

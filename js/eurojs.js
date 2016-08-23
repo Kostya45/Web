@@ -1,5 +1,6 @@
 "use strict";
 
+// скрывание всех блоков
 // списки клики
 document.getElementById("host").onclick = host_view;
 document.getElementById("stadium").onclick = stadium_view;
@@ -9,15 +10,37 @@ document.getElementById("country").onclick = country_view;
 document.getElementById("create-pro").onclick = showCreativProfile;
 document.getElementById('info').onclick = info;
 
+function hide() {
+	var x = document.querySelectorAll(".show");
+	for (var i = 0; i < x.length; i++) {
+		x[i].style.display = "none";
+	}
+}
+
 function host_view() {
-	document.getElementById("hostv").style.display = "block";
+	hide();
+	var cl = document.getElementById("hostv");
+	if (!cl) {
+		document.getElementById("del").style.display = "block";
+	}
+	else {
+		document.getElementById("hostv").style.display = "block";
+	}
 }
 
 function stadium_view() {
-	document.getElementById("block-stadium-show").style.display = "block";
+	hide();
+	var cl = document.getElementById("block-stadium-show");
+	if (!cl) {
+		document.getElementById("del").style.display = "block";
+	} 
+	else { 
+		document.getElementById("block-stadium-show").style.display = "block";
+	}
 }
 
 function group_view() {
+	hide();
 	var x = document.querySelectorAll('.rez');
 	for (var i = 0; i < x.length; i++) {
         x[i].style.display = 'block';
@@ -25,10 +48,18 @@ function group_view() {
 }
 
 function country_view() {
-	document.getElementById("countryv").style.display = "block";
+	hide();
+	var cl = document.getElementById("countryv");
+	if (!cl) {
+		document.getElementById("del").style.display = "block";
+	} 
+	else {
+		document.getElementById("countryv").style.display = "block";
+	}
 }
 
 function showCreativProfile() {
+	hide();
 	document.getElementById('creat-profile').style.display = 'block';
 }
 
@@ -90,7 +121,7 @@ function euro() {
 }
 // конец
 
-// Клики сортировки
+// Клики сортировки начало
 document.getElementById("sorta").onclick = sortA;
 document.getElementById("sortz").onclick = sortZ;
 document.getElementById("sorte").onclick = sortE;
@@ -146,5 +177,4 @@ function sortQ() {
 		sp1[sp3].innerHTML = newarr[sp3];
 	}
 }
-
 // конец
