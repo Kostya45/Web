@@ -219,12 +219,8 @@ $('.scrollup').click(function(){
 });
 // конец
 
-// удаление блока
-$('#close').click(function(){
-  	$("div#footer").remove();
+// удаление блоков
+$('.close').click(function(){
+$(this.parentNode).remove();
 });
 // конец
-
-$(".close").click(function(){
-  $('div').toggleClass("expand");
-});
