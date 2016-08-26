@@ -1,6 +1,6 @@
 /*настройка тела*/
 body {
-	background: url('back.jpg') no-repeat;
+	background: url('../image/back/back.jpg') no-repeat;
 	background-attachment: fixed;
 	background-size: 100%;
 }
@@ -31,7 +31,8 @@ body {
 /*блоки*/
 .host,
 .block-stadium,
-.create-profile {
+.create-profile,
+.country {
 	margin: 5% 10% 0% 10%;
 	float: left;
 	border-style: solid;
@@ -48,15 +49,7 @@ body {
 }
 
 .country {
-	float: left;
-	border-style: solid;
-	border-color: #317bb9;
-	padding: 5px;
-	border-radius: 10px;
-	background-color: white;
-	margin: 5% 10% 0% 10%;
 	width: 79%;
-	display: none;
 }
 
 .block-group1,
@@ -186,7 +179,6 @@ table {
 
 .image img:hover {
 	transform: scale(1.1);
-
  }
 
 .overlay {
@@ -362,7 +354,7 @@ a:hover {
 /*конец*/
 
 /*выпадающие картинки в header*/
-.ddbtn {
+.dropdown {
     margin: 1px 2px;
     float: right;
     width: 42px;
@@ -371,18 +363,18 @@ a:hover {
     display: block;
 }
 
-.ddbtn div {
+.dropdown div {
     padding: 5px;
 }
 
-.ddbtn:hover div {
+.dropdown:hover div {
     position: absolute;
     border-radius: 5px;
     background-color: #4794cf;
     z-index: 1;
 }
 
-.ddbtn a {
+.dropdown a {
     margin: 1px;
     display: block;
 }
@@ -442,7 +434,7 @@ a.save:active {
 	left:5%;
 	display:none;
 	text-indent:-9999px;
-	background: url('icon_top.png') no-repeat;
+	background: url('../image/others/icon_top.png') no-repeat;
 }
 
 a.scrollup:hover{

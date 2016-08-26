@@ -1,26 +1,26 @@
 "use strict";
 
 // скрывание всех блоков
-// списки клики
-document.getElementById("host").onclick = host_view;
-document.getElementById("stadium").onclick = stadium_view;
-document.getElementById("group").onclick = group_view;
-document.getElementById("country").onclick = country_view;
-
-document.getElementById("create-pro").onclick = showCreativProfile;
-document.getElementById('info').onclick = info;
-
-function hide() {
+function hideAll() {
 	var x = document.querySelectorAll(".show");
 	for (var i = 0; i < x.length; i++) {
 		x[i].style.display = "none";
 	}
 }
 
-function host_view() {
-	hide();
-	var cl = document.getElementById("hostv");
-	if (!cl) {
+// списки клики
+document.getElementById("host").onclick = hostView;
+document.getElementById("stadium").onclick = stadiumView;
+document.getElementById("group").onclick = groupView;
+document.getElementById("country").onclick = countryView;
+
+document.getElementById("create-pro").onclick = showCreativProfile;
+document.getElementById('info').onclick = info;
+
+function hostView() {
+	hideAll();
+	var deleted = document.getElementById("hostv");
+	if (!deleted) {
 		document.getElementById("del").style.display = "block";
 	}
 	else {
@@ -28,10 +28,10 @@ function host_view() {
 	}
 }
 
-function stadium_view() {
-	hide();
-	var cl = document.getElementById("block-stadium-show");
-	if (!cl) {
+function stadiumView() {
+	hideAll();
+	var deleted = document.getElementById("block-stadium-show");
+	if (!deleted) {
 		document.getElementById("del").style.display = "block";
 	} 
 	else { 
@@ -39,18 +39,18 @@ function stadium_view() {
 	}
 }
 
-function group_view() {
-	hide();
+function groupView() {
+	hideAll();
 	var x = document.querySelectorAll('.rez');
 	for (var i = 0; i < x.length; i++) {
         x[i].style.display = 'block';
 	}
 }
 
-function country_view() {
-	hide();
-	var cl = document.getElementById("countryv");
-	if (!cl) {
+function countryView() {
+	hideAll();
+	var deleted = document.getElementById("countryv");
+	if (!deleted) {
 		document.getElementById("del").style.display = "block";
 	} 
 	else {
@@ -59,7 +59,7 @@ function country_view() {
 }
 
 function showCreativProfile() {
-	hide();
+	hideAll();
 	document.getElementById('creat-profile').style.display = 'block';
 }
 
@@ -77,24 +77,30 @@ document.getElementById("save").onclick = save;
 
 function save() {
 	var name_user = document.Profile.Name.value;
+	if (name_user === "") {
+		alert("No name");
+		document.getElementsByName("Name").style.borderColor = "red";
+	}
+	else {
 	var check = document.getElementsByName('gender');
 	for (var i = 0; i < check.length; i++) {
 		if(check[i].type == "radio" && check[i].checked) {
 			document.getElementById('gender-profile').innerHTML = '<font color="red">Gender:</font> ' +check[i].value+ '';
 		}
 	}
-	
+
 	var checkbox = document.getElementsByName('team');
 	var checked = [];
-	for(var ii = 0; ii < checkbox.length; ii++) {
-		if(checkbox[ii].type == 'checkbox') {
-        	if(checkbox[ii].checked) checked.push(checkbox[ii].value);
+	for(i = 0; i < checkbox.length; i++) {
+		if(checkbox[i].type == 'checkbox') {
+        	if(checkbox[i].checked) checked.push(checkbox[i].value);
     	}
 	}
 	document.getElementById('creat-profile').style.display = 'none';
 	alert('Your profile is saved.');
 	document.getElementById('name').innerHTML = 'Hi, ' +name_user+ '!';
-	document.getElementById('team-reg').innerHTML = '<font color="blue">Favorite team(s):</font> ' +checked+ '';
+	document.getElementById('team-reg').innerHTML = '<font color="blue">Favorite team(s):</font> ' +checked+ '.';
+	}
 }
 
 function cancel() {
@@ -109,15 +115,15 @@ document.getElementById("red").onclick = red;
 document.getElementById("euro").onclick = euro;
 
 function standart() {
-	document.body.style.backgroundImage = "url('style/back/back.jpg')";
+	document.body.style.backgroundImage = "url('style/image/back/back.jpg')";
 }
 
 function red() {
-	document.body.style.backgroundImage = 'url("style/back/redh.jpg")';
+	document.body.style.backgroundImage = 'url("style/image/back/redh.jpg")';
 }
 
 function euro() {
-	document.body.style.backgroundImage = 'url("style/back/euroh.jpg")';
+	document.body.style.backgroundImage = 'url("style/image/back/euroh.jpg")';
 }
 // конец
 
@@ -128,53 +134,97 @@ document.getElementById("sorte").onclick = sortE;
 document.getElementById("sortq").onclick = sortQ;
 
 function sortA() {
-	var myar = new Array();
-	var li1 = document.querySelectorAll('.li1');
-	for(var li2 = 0; li2 < li1.length; li2++) {
-		myar[li2] = li1[li2].innerHTML;
+	var myArray = [];
+	var list = document.querySelectorAll('.li1');
+	for(var i = 0; i < list.length; i++) {
+		myArray[i] = list[i].innerHTML;
 	}
-	myar.sort();
-	for(var li3 = 0; li3 < myar.length; li3++) {
-		li1[li3].innerHTML = myar[li3];
+	myArray.sort();
+	for(i = 0; i < myArray.length; i++) {
+		list[i].innerHTML = myArray[i];
 	}
 }
 // Сортировка инверсия алфавиту
 function sortZ() {
-	var myar = new Array();
-	var li1 = document.querySelectorAll('.li1');
-	for(var li2 = 0; li2 < li1.length; li2++) {
-		myar[li2] = li1[li2].innerHTML;
+	var myArray = [];
+	var list = document.querySelectorAll('.li1');
+	for(var i = 0; i < list.length; i++) {
+		myArray[i] = list[i].innerHTML;
 	}
-	myar.sort();
-	myar.reverse();
-	for(var li3 = 0; li3 < myar.length;li3++) {
-		li1[li3].innerHTML = myar[li3];
+	myArray.sort();
+	myArray.reverse();
+	for(i = 0; i < myArray.length;i++) {
+		list[i].innerHTML = myArray[i];
 	}
 }
 // Сортировка чисел
 function sortE() {
-	var newarr = new Array();
-	var sp1 = document.querySelectorAll('.li2')
-	for(var sp2 = 0; sp2 < sp1.length; sp2++) {
-		newarr[sp2] = sp1[sp2].innerHTML;
+	var myArray = [];
+	var list = document.querySelectorAll('.li2')
+	for(var i = 0; i < list.length; i++) {
+		myArray[i] = list[i].innerHTML;
 	}
-	newarr.sort(function(a,b){return a-b;});
-	for(var sp3 = 0; sp3 < newarr.length; sp3++) {
-		sp1[sp3].innerHTML = newarr[sp3];
+	myArray.sort(function(a,b){return a-b;});
+	for(i = 0; i < myArray.length; i++) {
+		list[i].innerHTML = myArray[i];
 	}
 }
 
 // Сортировка инверсия 
 function sortQ() {
-	var newarr = new Array();
-	var sp1 = document.querySelectorAll('.li2')
-	for(var sp2 = 0; sp2 < sp1.length;sp2++) {
-		newarr[sp2] = sp1[sp2].innerHTML;
+	var myArray = [];
+	var list = document.querySelectorAll('.li2')
+	for(var i = 0; i < list.length;i++) {
+		myArray[i] = list[i].innerHTML;
 	}
-	newarr.sort(function(a,b){return a-b;});
-	newarr.reverse();
-	for(var sp3 = 0; sp3 < newarr.length; sp3++) {
-		sp1[sp3].innerHTML = newarr[sp3];
+	myArray.sort(function(a,b){return a-b;});
+	myArray.reverse();
+	for(var i = 0; i < myArray.length; i++) {
+		list[i].innerHTML = myArray[i];
 	}
 }
 // конец
+
+// открытие слайдера
+$(function(){
+    $('.slide-out-div').tabSlideOut({
+        tabHandle: '.handle',							   //класс элемента вкладки
+        pathToTabImage: 'style/image/others/setting.png',  //путь к изображению *required*
+        imageHeight: '40px',                               //высота  *required*
+        imageWidth: '40px',                                //width of tab image *required*    
+        tabLocation: 'left',                               //side of screen where tab lives, top, right, bottom, or left
+        speed: 1000,                                       //speed of animation
+        action: 'click',                                   //options: 'click' or 'hover', action to trigger animation
+        topPos: '20%',                                     //position from the top
+        fixedPosition: true                                //options: true makes it stick(fixed position) on scroll
+    });
+});
+// конец
+
+// подъём на верх
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 100) {
+			$('.scrollup').fadeIn();
+		} 
+		else {
+			$('.scrollup').fadeOut();
+		}
+	});
+
+$('.scrollup').click(function(){
+	$("html, body").animate({ scrollTop: 0 }, 600);
+		return false;
+	});
+});
+// конец
+
+// удаление блока
+$('#close').click(function(){
+  	$("div#footer").remove();
+});
+// конец
+
+$(".close").click(function(){
+  $('div').toggleClass("expand");
+});

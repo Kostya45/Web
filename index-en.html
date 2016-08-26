@@ -3,45 +3,12 @@
 <head>
 	<title>Euro 2016 in France</title>
 	<link rel="stylesheet" href="style/css/style.css">
-	<link rel="icon" href="style/ico/euro2016.ico" type="image/x-icon">
+	<link rel="icon" href="style/image/ico/euro2016.ico" type="image/x-icon">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<script src="js/jquery-latest.js"></script>
 	<script src="js/jquery.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-		$(window).scroll(function(){
-		if ($(this).scrollTop() > 100) {
-			$('.scrollup').fadeIn();
-		} 
-		else {
-			$('.scrollup').fadeOut();
-		}
-		});
- 
-		$('.scrollup').click(function(){
-			$("html, body").animate({ scrollTop: 0 }, 600);
-			return false;
-		});
- 
-		});
-	</script>
     <script src="js/jquery.tabSlideOut.v1.2.js"></script>
 	<script src="js/eurojs.js" defer></script>
-    	<script>
-       	 $(function(){
-             $('.slide-out-div').tabSlideOut({
-                 pathToTabImage: 'style/image/others/setting.png',          		//путь к изображению *required*
-                 imageHeight: '40px',                               //высота  *required*
-                 imageWidth: '40px',                               //width of tab image *required*    
-                 tabLocation: 'left',                               //side of screen where tab lives, top, right, bottom, or left
-                 speed: 1000,                                        //speed of animation
-                 action: 'click',                                   //options: 'click' or 'hover', action to trigger animation
-                 topPos: '20%',                                   //position from the top
-                 fixedPosition: true                              //options: true makes it stick(fixed position) on scroll
-             });
-         });
-
-         </script>
 </head>
 <body>
 <header class="head">
@@ -49,9 +16,9 @@
 		<li class="right-li">
 			<a href="#">Profile</a>
 			<ul class="submenu">
-				<li id="login"><a href="#profile"><abbr title="not work">Login</abbr></a></li>
-            	<li id="create-pro"><a href="#creat-profile"><abbr title="Create">Create Profile</abbr></a></li>
-            	<li id="info"><a href="#time" id='logout'><abbr title="Time">Information</abbr></a></li>
+				<li id="login"><a href="#profile" title="no work">Login</a></li>
+            	<li id="create-pro"><a href="#creat-profile" title="create">Create Profile</a></li>
+            	<li id="info"><a href="#time" id='logout' title="date and others">Informationa</a></li>
         	</ul>
     	</li>
     	<li class="right-ul">
@@ -64,36 +31,35 @@
         	</ul>
     	</li>
 		<li>
-		<div class="ddbtn">
+		<div class="dropdown">
 			<div>
-				<a><img src="style/lang/en.png" alt="eng"></a>
-				<a href="index-ru.html"><img src="style/lang/ru.png" alt="rus"></a>
+				<a><img src="style/image/lang/en.png" alt="eng"></a>
+				<a href="index-ru.html"><img src="style/image/lang/ru.png" alt="rus"></a>
 			</div>
 		</div>
 		</li>
 		<li>
-		<div class="ddbtn">
+		<div class="dropdown">
 			<div>
-			<a href="#qwe" id="stan"><img src="style/back/standard.jpg" alt="backs"></a>
-			<a href="#qwe" id="red"><img src="style/back/red.jpg" alt="backr"></a>
-			<a href="#qwe" id="euro"><img src="style/back/euro.jpg" alt="backeuro"></a>
+			<a href="#qwe" id="stan"><img src="style/image/back/standard.jpg" alt="backs"></a>
+			<a href="#qwe" id="red"><img src="style/image/back/red.jpg" alt="backr"></a>
+			<a href="#qwe" id="euro"><img src="style/image/back/euro.jpg" alt="backeuro"></a>
 			</div>
 		</div>
 		</li>
 	</ul>
 </header>
     <div class="slide-out-div">
-        <a class="handle" href="http://link-for-non-js-users">Content</a>
+        <a class="handle" href="#" title="click">Click</a>
         <h3>Profile</h3>
         <p id="name">not created
         <p id="gender-profile">
         <p id="team-reg">
     </div>
 <div class="host show" id="hostv">
-	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
-	<img src="style/image/others/close.png" alt="close"></a>
+	<a class="close" href="#"><img src="style/image/others/close.png" alt="close"></a>
 	<div class="image">
-		<a href="#2"><img class="image-left" src="style/image/host/france.jpg" width="200" height="150" alt="Flag France"></a>
+		<a href="#2"><img class="image-left" src="style/image/host/france.jpg" alt="Flag France"></a>
 	</div>
 	<h1>France</h1>
 	<div>
@@ -120,8 +86,7 @@
 	</div>
 </div>
 <div class="block-stadium show" id="block-stadium-show">
-	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
-	<img src="style/image/others/close.png" alt="close"></a>
+	<a class="close" href="#"><img src="style/image/others/close.png" alt="close"></a>
 	<h1>Stadiums</h1>
 	<ul>
 		<li><a href="#parc-des-prines">Parc des Princes</a></li>
@@ -327,8 +292,7 @@
 	</p>
 </div>
 <div class="block-group1 show rez" id="block-group1">
-	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
-	<img src="style/image/others/close.png" alt="close"></a>
+	<a class="close" href="#"><img src="style/image/others/close.png" alt="close"></a>
 	<h4>Group A</h4>
 	<table>
 		<tr class="center-style">
@@ -379,8 +343,7 @@
 	</table>
 </div>
 <div class="block-group2 show rez" id="block-group2">
-	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
-	<img src="style/image/others/close.png" alt="close"></a>
+	<a class="close" href="#"><img src="style/image/others/close.png" alt="close"></a>
 	<h4>Group B</h4>
 	<table>
 		<tr class="center-style">
@@ -431,8 +394,7 @@
 	</table>
 </div>
 <div class="block-group3 show rez" id="block-group3">
-	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
-	<img src="style/image/others/close.png" alt="close"></a>
+	<a class="close" href="#"><img src="style/image/others/close.png" alt="close"></a>
 	<h4>Group C</h4>
 	<table>
 		<tr class="center-style">
@@ -483,8 +445,7 @@
 	</table>
 </div>
 <div class="block-group4 show rez" id="block-group4">
-	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
-	<img src="style/image/others/close.png" alt="close"></a>
+	<a class="close" href="#"><img src="style/image/others/close.png" alt="close"></a>
 	<h4>Group D</h4>
 	<table>
 		<tr class="center-style">
@@ -535,8 +496,7 @@
 	</table>
 </div>
 <div class="block-group5 show rez" id="block-group5">	
-	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
-	<img src="style/image/others/close.png" alt="close"></a>
+	<a class="close" href="#"><img src="style/image/others/close.png" alt="close"></a>
 	<h4>Group E</h4>
 	<table>
 		<tr class="center-style">
@@ -587,8 +547,7 @@
 	</table>
 </div>
 <div class="block-group6 show rez" id="block-group6">
-	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
-	<img src="style/image/others/close.png" alt="close"></a>
+	<a class="close" href="#"><img src="style/image/others/close.png" alt="close"></a>
 	<h4>Group F</h4>
 	<table>
 		<tr class="center-style">
@@ -691,8 +650,7 @@
 	</form>
 </div>
 <div class="country show" id="countryv">
-	<a class="close" href="#" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">
-	<img src="style/image/others/close.png" alt="close"></a>
+	<a class="close" href="#"><img src="style/image/others/close.png" alt="close"></a>
 	<h1>Team in Euro 2016</h1>
 	<a href="#al" id='sorta'>Sort alphabetically</a><br>
 	<a href="#rev" id='sortz'>Sort unalphabetically</a><br>
@@ -745,11 +703,5 @@
 <div>
 	<a href="#" class="scrollup">On top</a>
 </div>
-
-<script type="text/javascript">
-	$('#close').click(function(){
-  		$("div#footer").remove();
-	});
-</script>
 </body>
 </html>
